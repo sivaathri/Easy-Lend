@@ -1,55 +1,27 @@
 import React from 'react';
-import { Phone, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#fafbfb]">
-      {/* Full-bleed Right Photo extending to top & right edges */}
-      <div className="absolute right-0 top-0 bottom-0 w-full sm:w-[60%] lg:w-[57%] pointer-events-none z-0 overflow-hidden">
+    <section className="relative w-full overflow-hidden bg-[#fafbfb] border-b border-gray-100/60">
+      
+      {/* Full-bleed Right Photo extending to top, bottom & right edge */}
+      <div className="absolute right-0 top-0 bottom-0 w-full sm:w-[60%] lg:w-[56%] pointer-events-none z-0 overflow-hidden">
         <img 
           src="/assets/hero-seamless.png" 
           alt="Financial consultation session at Eazy Lend"
           className="w-full h-full object-cover object-right"
         />
         {/* Soft fade-in gradient mask on the left */}
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#fafbfb] via-[#fafbfb]/80 to-transparent pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-28 lg:w-36 bg-gradient-to-r from-[#fafbfb] via-[#fafbfb]/85 to-transparent pointer-events-none" />
       </div>
 
-      {/* Content Container (Full Width, Edge-to-Edge) */}
-      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12 pt-4 sm:pt-5 pb-6 sm:pb-8 flex flex-col justify-between min-h-[300px] sm:min-h-[340px]">
+      {/* Content Container (Full Width Edge-to-Edge) */}
+      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12 flex flex-col justify-center min-h-[260px] sm:min-h-[300px]">
         
-        {/* Top Header Row (Logo & Call Now) */}
-        <div className="w-full flex items-center justify-between mb-4 sm:mb-6">
-          {/* Logo */}
-          <a href="#" className="flex items-center select-none">
-            <img 
-              src="/assets/logo.png" 
-              alt="Eazy Lend - Get loan, Buy insurance" 
-              className="h-10 sm:h-12 w-auto object-contain"
-            />
-          </a>
-
-          {/* Call Now Pill (Single, interactive button) */}
-          <a 
-            href="tel:9659590505" 
-            className="group flex items-center gap-2.5 bg-[#033d32] hover:bg-[#022c24] text-white px-4 py-1.5 sm:px-5 sm:py-2 rounded-2xl shadow-sm transition-all duration-200 hover:shadow-md cursor-pointer pointer-events-auto"
-          >
-            <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center">
-              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white fill-white transition-transform group-hover:rotate-12" />
-            </div>
-            <div className="flex flex-col text-left leading-tight">
-              <span className="text-[10px] sm:text-[11px] font-medium text-emerald-100/90 tracking-wide">
-                Call Now
-              </span>
-              <span className="text-xs sm:text-sm font-bold tracking-wider text-white">
-                9659590505
-              </span>
-            </div>
-          </a>
-        </div>
-
-        {/* Hero Left Content */}
-        <div className="w-full max-w-xl text-left">
+        {/* Hero Left Content Column */}
+        <div className="w-full max-w-lg lg:max-w-xl text-left">
+          
           {/* Eyebrow */}
           <div className="flex items-center gap-2 mb-2 sm:mb-2.5">
             <span className="w-5 h-[2px] bg-[#d97706] inline-block rounded-full"></span>
@@ -59,7 +31,7 @@ export default function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight leading-[1.12] mb-2 sm:mb-3">
+          <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight leading-[1.12] mb-2.5 sm:mb-3">
             <span className="text-[#05372d] block">The Right Loan.</span>
             <span className="text-[#c98218] block">The Right Protection.</span>
           </h1>
@@ -87,6 +59,7 @@ export default function Hero() {
               <ArrowRight className="w-3.5 h-3.5 text-[#064438] transition-transform group-hover:translate-x-1" />
             </a>
           </div>
+
         </div>
 
       </div>
