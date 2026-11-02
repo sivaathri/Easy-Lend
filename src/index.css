@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #1f2937;
+    background-color: #fafbfb;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom styling matching the exact design aesthetic */
+.font-brand {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.text-brand-dark {
+  color: #063d33;
+}
+
+.text-brand-gold {
+  color: #c98218;
+}
+
+.bg-brand-dark {
+  background-color: #064438;
+}
+
+.border-brand-gold {
+  border-color: #e5bd7c;
+}
+
