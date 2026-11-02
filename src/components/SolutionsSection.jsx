@@ -63,14 +63,14 @@ const insuranceProducts = [
 
 export default function SolutionsSection() {
   return (
-    <section className="w-full max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-12 py-6 sm:py-7">
-      <div className="flex flex-col lg:flex-row gap-5 lg:gap-5 items-stretch">
+    <section className="w-full px-4 sm:px-8 lg:px-12 py-5 sm:py-7">
+      <div className="flex flex-col lg:flex-row gap-5 items-stretch w-full">
         
-        {/* ================= LOAN SOLUTIONS ================= */}
-        <div id="loan-solutions" className="flex-1 lg:w-[56%] flex flex-col justify-between">
+        {/* ================= LOAN SOLUTIONS (5 Cards) ================= */}
+        <div id="loan-solutions" className="flex-1 lg:w-[57%] flex flex-col justify-between">
           <div>
-            {/* Section Header */}
-            <div className="mb-3.5">
+            {/* Header */}
+            <div className="mb-3">
               <h2 className="text-xl sm:text-[22px] font-bold tracking-tight">
                 <span className="text-[#05372d]">Loan </span>
                 <span className="text-[#c98218]">Solutions</span>
@@ -81,7 +81,7 @@ export default function SolutionsSection() {
             </div>
 
             {/* 5 Cards Row */}
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-2.5">
               {loanProducts.map((item) => (
                 <div
                   key={item.id}
@@ -100,7 +100,7 @@ export default function SolutionsSection() {
                     <h3 className="text-xs font-bold text-[#05372d] group-hover:text-[#c98218] transition-colors leading-tight">
                       {item.title}
                     </h3>
-                    <p className="text-[10px] text-gray-500 leading-tight mt-1 max-w-[95px]">
+                    <p className="text-[10px] text-gray-500 leading-tight mt-1 max-w-[105px]">
                       {item.subtitle}
                     </p>
                   </div>
@@ -114,14 +114,14 @@ export default function SolutionsSection() {
           </div>
         </div>
 
-        {/* ================= INSURANCE SOLUTIONS ================= */}
+        {/* ================= INSURANCE SOLUTIONS (4 Cards) ================= */}
         <div 
           id="insurance-solutions" 
-          className="lg:w-[44%] bg-[#f2faf5] border border-[#d6ecdf] rounded-2xl p-4 sm:p-4 flex flex-col justify-between"
+          className="lg:w-[43%] bg-[#f2faf5] border border-[#d6ecdf] rounded-2xl p-4 sm:p-4 flex flex-col justify-between"
         >
           <div>
-            {/* Section Header */}
-            <div className="mb-3.5">
+            {/* Header */}
+            <div className="mb-3">
               <h2 className="text-xl sm:text-[22px] font-bold tracking-tight">
                 <span className="text-[#05372d]">Insurance </span>
                 <span className="text-[#c98218]">Solutions</span>
@@ -132,7 +132,7 @@ export default function SolutionsSection() {
             </div>
 
             {/* 4 Cards Row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-2.5">
               {insuranceProducts.map((item) => (
                 <div
                   key={item.id}
@@ -151,7 +151,7 @@ export default function SolutionsSection() {
                     <h3 className="text-xs font-bold text-[#05372d] group-hover:text-[#c98218] transition-colors leading-tight">
                       {item.title}
                     </h3>
-                    <p className="text-[10px] text-gray-500 leading-tight mt-1 max-w-[95px]">
+                    <p className="text-[10px] text-gray-500 leading-tight mt-1 max-w-[105px]">
                       {item.subtitle}
                     </p>
                   </div>

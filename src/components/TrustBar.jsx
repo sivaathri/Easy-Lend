@@ -54,7 +54,7 @@ export default function TrustBar() {
 
   return (
     <div className="w-full bg-[#eef6f2] border-y border-[#e2efe7]">
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-12 py-3 sm:py-3.5">
+      <div className="w-full px-4 sm:px-8 lg:px-12 py-3.5 sm:py-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-0 items-center">
           {trustItems.map((item, index) => (
             <div 
