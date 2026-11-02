@@ -6,18 +6,18 @@ export default function Hero() {
     <section className="relative w-full overflow-hidden bg-[#fafbfb] border-b border-gray-100/60">
       
       {/* Full-bleed Right Photo extending to top, bottom & right edge */}
-      <div className="absolute right-0 top-0 bottom-0 w-full sm:w-[60%] lg:w-[56%] pointer-events-none z-0 overflow-hidden">
+      <div className="absolute right-0 top-0 bottom-0 w-full sm:w-[62%] lg:w-[58%] pointer-events-none z-0 overflow-hidden">
         <img 
-          src="/assets/hero-seamless.png" 
+          src="/assets/hero-advisor.jpg" 
           alt="Financial consultation session at Eazy Lend"
           className="w-full h-full object-cover object-right"
         />
         {/* Soft fade-in gradient mask on the left */}
-        <div className="absolute inset-y-0 left-0 w-28 lg:w-36 bg-gradient-to-r from-[#fafbfb] via-[#fafbfb]/85 to-transparent pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-28 lg:w-40 bg-gradient-to-r from-[#fafbfb] via-[#fafbfb]/85 to-transparent pointer-events-none" />
       </div>
 
       {/* Content Container (Full Width Edge-to-Edge) */}
-      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12 flex flex-col justify-center min-h-[260px] sm:min-h-[300px]">
+      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12 flex flex-col justify-center min-h-[280px] sm:min-h-[320px]">
         
         {/* Hero Left Content Column */}
         <div className="w-full max-w-lg lg:max-w-xl text-left">

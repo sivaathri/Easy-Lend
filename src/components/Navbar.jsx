@@ -11,7 +11,7 @@ export default function Navbar() {
           <img 
             src="/assets/logo.png" 
             alt="Eazy Lend - Get loan, Buy insurance" 
-            className="h-10 sm:h-12 w-auto object-contain"
+            className="h-20 sm:h-22 w-auto object-contain"
           />
         </a>
 
