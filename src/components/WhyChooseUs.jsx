@@ -69,7 +69,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8">
+    <section id="why-choose-us" className="w-full px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8">
       <div className="w-full">
         {/* Centered Heading */}
         <h2 className="text-center font-bold text-lg sm:text-xl md:text-[22px] text-[#004737] mb-3.5 sm:mb-4 tracking-tight">
