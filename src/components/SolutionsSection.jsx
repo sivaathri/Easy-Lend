@@ -64,10 +64,10 @@ const insuranceProducts = [
 export default function SolutionsSection() {
   return (
     <section className="w-full px-4 sm:px-8 lg:px-12 py-5 sm:py-7">
-      <div className="flex flex-col lg:flex-row gap-5 items-stretch w-full">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch w-full">
         
         {/* ================= LOAN SOLUTIONS (5 Cards) ================= */}
-        <div id="loan-solutions" className="flex-1 lg:w-[57%] flex flex-col justify-between">
+        <div id="loan-solutions" className="flex-1 lg:w-[56%] flex flex-col justify-between">
           <div>
             {/* Header */}
             <div className="mb-3">
@@ -115,10 +115,8 @@ export default function SolutionsSection() {
         </div>
 
         {/* ================= INSURANCE SOLUTIONS (4 Cards) ================= */}
-        <div 
-          id="insurance-solutions" 
-          className="lg:w-[43%] bg-[#f2faf5] border border-[#d6ecdf] rounded-2xl p-4 sm:p-4 flex flex-col justify-between"
-        >
+        {/* Same UI design style as Loan Solutions: no colored box container, identical card style */}
+        <div id="insurance-solutions" className="lg:w-[44%] flex flex-col justify-between">
           <div>
             {/* Header */}
             <div className="mb-3">
@@ -136,7 +134,7 @@ export default function SolutionsSection() {
               {insuranceProducts.map((item) => (
                 <div
                   key={item.id}
-                  className="group bg-white rounded-xl p-2.5 pt-3 pb-2.5 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#e2eee6] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[155px]"
+                  className="group bg-white rounded-xl p-2.5 pt-3 pb-2.5 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[155px]"
                 >
                   <div className="w-full flex items-center justify-center h-14 mb-1">
                     <img
