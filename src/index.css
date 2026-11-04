@@ -3,12 +3,50 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     color: #1f2937;
     background-color: #fafbfb;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Firefox Custom Scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #004737 #edf5f1;
+  }
+
+  /* WebKit (Chrome, Edge, Safari, Opera) Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #edf5f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #004737 0%, #075645 100%);
+    border-radius: 9999px;
+    border: 2px solid #edf5f1;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00362a 0%, #004737 100%);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: #02261e;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: #edf5f1;
   }
 }
 
@@ -32,4 +70,5 @@
 .border-brand-gold {
   border-color: #e5bd7c;
 }
+
 

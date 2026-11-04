@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SolutionsSection from './components/SolutionsSection';
+import WhyChooseUs from './components/WhyChooseUs';
 
 export default function App() {
   return (
@@ -14,6 +15,9 @@ export default function App() {
 
       {/* 3. Full-Width Product Solutions Section (Loan & Insurance) */}
       <SolutionsSection />
+
+      {/* 4. Why Choose Us Section */}
+      <WhyChooseUs />
     </div>
   );
 }
