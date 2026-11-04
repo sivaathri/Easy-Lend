@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import TrustBar from './components/TrustBar';
 import SolutionsSection from './components/SolutionsSection';
 
 export default function App() {
@@ -10,13 +9,10 @@ export default function App() {
       {/* 1. Header with Logo, Puducherry location, and Dual Phone Numbers */}
       <Navbar />
 
-      {/* 2. Hero Section with Full-Bleed Right Visual */}
+      {/* 2. Hero Section with Exact Content Styling & Integrated Trust Badges */}
       <Hero />
 
-      {/* 3. Full-Width Trust Badges Bar */}
-      <TrustBar />
-
-      {/* 4. Full-Width Product Solutions Section (Loan & Insurance) */}
+      {/* 3. Full-Width Product Solutions Section (Loan & Insurance) */}
       <SolutionsSection />
     </div>
   );
