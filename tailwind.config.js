@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '480px',
+      },
       colors: {
         brand: {
           dark: '#032e27',
@@ -27,4 +30,3 @@ export default {
   },
   plugins: [],
 }
-

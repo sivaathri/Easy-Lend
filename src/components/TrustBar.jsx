@@ -8,7 +8,7 @@ export default function TrustBar() {
       subtitle: 'Solutions tailored to your needs',
       icon: (
         <svg 
-          className="w-5 h-5 sm:w-6 sm:h-6 text-[#064438] fill-current" 
+          className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#064438] fill-current flex-shrink-0" 
           viewBox="0 0 24 24"
         >
           <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
@@ -23,7 +23,7 @@ export default function TrustBar() {
       subtitle: 'Clear information, no hidden charges',
       icon: (
         <svg 
-          className="w-5 h-5 sm:w-6 sm:h-6 text-[#064438]" 
+          className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#064438] flex-shrink-0" 
           fill="currentColor" 
           viewBox="0 0 24 24"
         >
@@ -37,7 +37,7 @@ export default function TrustBar() {
       subtitle: 'From enquiry to approval and beyond',
       icon: (
         <svg 
-          className="w-5 h-5 sm:w-6 sm:h-6 text-[#064438]" 
+          className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#064438] flex-shrink-0" 
           fill="none" 
           stroke="currentColor" 
           strokeWidth="2.2" 
@@ -54,23 +54,23 @@ export default function TrustBar() {
 
   return (
     <div className="w-full bg-[#eef6f2] border-y border-[#e2efe7]">
-      <div className="w-full px-4 sm:px-8 lg:px-12 py-3.5 sm:py-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-0 items-center">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-3.5 md:py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 sm:gap-3 md:gap-0 items-center">
           {trustItems.map((item, index) => (
             <div 
               key={item.id} 
-              className={`flex items-center gap-3 justify-start md:justify-center ${
-                index > 0 ? 'md:border-l md:border-[#cfe4d7] md:pl-8' : ''
-              } ${index < trustItems.length - 1 ? 'md:pr-8' : ''}`}
+              className={`flex items-center gap-2.5 sm:gap-3 justify-start md:justify-center ${
+                index > 0 ? 'md:border-l md:border-[#cfe4d7] md:pl-6 lg:md:pl-8' : ''
+              } ${index < trustItems.length - 1 ? 'md:pr-6 lg:md:pr-8' : ''}`}
             >
               <div className="flex-shrink-0 text-[#064438]">
                 {item.icon}
               </div>
               <div className="flex flex-col text-left">
-                <span className="text-xs sm:text-[13px] font-bold text-[#063d33] tracking-tight">
+                <span className="text-xs sm:text-[13px] md:text-sm font-bold text-[#063d33] tracking-tight">
                   {item.title}
                 </span>
-                <span className="text-[10px] sm:text-[11px] text-gray-500 font-normal">
+                <span className="text-[10px] sm:text-[11px] md:text-xs text-gray-500 font-normal">
                   {item.subtitle}
                 </span>
               </div>
