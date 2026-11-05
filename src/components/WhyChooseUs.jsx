@@ -1,4 +1,5 @@
 import React from 'react';
+import TrustedPartners from './TrustedPartners';
 
 const features = [
   {
@@ -108,6 +109,11 @@ export default function WhyChooseUs() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* ================= OUR TRUSTED PARTNERS (IRDAI / TATA AIA / TATA AIG) ================= */}
+        <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-gray-200/70 flex justify-center w-full">
+          <TrustedPartners />
         </div>
       </div>
     </section>
