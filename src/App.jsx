@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SolutionsSection from './components/SolutionsSection';
 import WhyChooseUs from './components/WhyChooseUs';
+import FreeConsultation from './components/FreeConsultation';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -20,7 +21,10 @@ export default function App() {
       {/* 4. Why Choose Us Section */}
       <WhyChooseUs />
 
-      {/* 5. Luxury Footer with Golden Wave Accent */}
+      {/* 5. Get a Free Consultation Section */}
+      <FreeConsultation />
+
+      {/* 6. Luxury Footer with Golden Wave Accent */}
       <Footer />
     </div>
   );
