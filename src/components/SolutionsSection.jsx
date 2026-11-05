@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
 
 const loanProducts = [
   {
@@ -63,109 +63,133 @@ const insuranceProducts = [
 ];
 
 export default function SolutionsSection() {
+  const scrollToConsultation = (serviceName) => {
+    const el = document.getElementById('free-consultation');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-10">
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-8 xl:gap-10 items-stretch w-full">
-        
-        {/* ================= LOAN SOLUTIONS (5 Cards) ================= */}
-        <div id="loan-solutions" className="flex-1 lg:w-[56%] flex flex-col justify-between">
-          <div>
-            {/* Header */}
-            <div className="mb-3.5 sm:mb-4">
-              <h2 className="text-xl xs:text-2xl sm:text-[24px] font-bold tracking-tight">
-                <span className="text-[#05372d]">Loan </span>
-                <span className="text-[#c98218]">Solutions</span>
-              </h2>
-              <p className="text-xs sm:text-[13px] md:text-sm text-gray-500 mt-0.5">
-                Flexible loan options to help you achieve your goals.
-              </p>
-            </div>
-
-            {/* 5 Cards Responsive Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-2.5 sm:gap-3">
-              {loanProducts.map((item) => (
-                <div
-                  key={item.id}
-                  className={`group bg-white rounded-xl p-2.5 xs:p-3 sm:p-2.5 md:p-3 pt-3 pb-2.5 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[148px] xs:min-h-[155px] ${
-                    item.isFifth ? 'col-span-2 sm:col-span-1 max-w-[240px] xs:max-w-[280px] sm:max-w-none mx-auto w-full' : ''
-                  }`}
-                >
-                  <div className="w-full flex items-center justify-center h-12 xs:h-14 sm:h-14 mb-1">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div className="flex flex-col items-center my-auto px-0.5">
-                    <h3 className="text-[11px] xs:text-xs font-bold text-[#05372d] group-hover:text-[#c98218] transition-colors leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-[9px] xs:text-[10px] text-gray-500 leading-tight mt-1 max-w-[105px]">
-                      {item.subtitle}
-                    </p>
-                  </div>
-
-                  <div className="mt-2 w-5 h-5 rounded-full border border-[#f3cca0] bg-[#fffaf3] text-[#d97706] group-hover:bg-[#d97706] group-hover:text-white transition-all flex items-center justify-center flex-shrink-0">
-                    <ArrowRight className="w-2.5 h-2.5" />
-                  </div>
-                </div>
-              ))}
-            </div>
+    <section className="w-full max-w-[1360px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-10 md:py-12 space-y-10 sm:space-y-12">
+      
+      {/* ================= 1. LOAN SOLUTIONS (Full Width, 5 Spacious Cards) ================= */}
+      <div id="loan-solutions" className="w-full">
+        {/* Header */}
+        <div className="mb-5 sm:mb-6">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#e8f4ee] text-[#004737] border border-[#004737]/15 mb-2.5">
+            <Sparkles className="w-3.5 h-3.5 text-[#c48318]" />
+            <span>Tailored Financing Options</span>
           </div>
+          <h2 className="text-2xl xs:text-3xl sm:text-[28px] font-bold tracking-tight">
+            <span className="text-[#004737]">Loan </span>
+            <span className="text-[#c48318]">Solutions</span>
+          </h2>
+          <p className="text-xs sm:text-sm text-gray-500 mt-1 max-w-2xl leading-relaxed">
+            Flexible, competitive loan options designed to empower your personal milestones and scale your business ambitions.
+          </p>
         </div>
 
-        {/* ================= INSURANCE SOLUTIONS (4 Cards) ================= */}
-        <div id="insurance-solutions" className="lg:w-[44%] flex flex-col justify-between">
-          <div>
-            {/* Header */}
-            <div className="mb-3.5 sm:mb-4">
-              <h2 className="text-xl xs:text-2xl sm:text-[24px] font-bold tracking-tight">
-                <span className="text-[#05372d]">Insurance </span>
-                <span className="text-[#c98218]">Solutions</span>
-              </h2>
-              <p className="text-xs sm:text-[13px] md:text-sm text-gray-500 mt-0.5">
-                Comprehensive insurance plans for a secure tomorrow.
-              </p>
+        {/* 5 Cards Grid: 5 columns on desktop/laptop 1024px, 3 on tablet, 2 on mobile */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-3.5 md:gap-4 lg:gap-5">
+          {loanProducts.map((item) => (
+            <div
+              key={item.id}
+              onClick={() => scrollToConsultation(item.title)}
+              role="button"
+              tabIndex={0}
+              className={`group relative bg-white rounded-2xl p-3.5 sm:p-4 md:p-4.5 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-[#edebe7] hover:border-[#c48318]/50 hover:shadow-[0_12px_28px_rgba(0,71,55,0.08)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between text-center cursor-pointer min-h-[195px] sm:min-h-[215px] ${
+                item.isFifth ? 'col-span-2 sm:col-span-1 max-w-[280px] sm:max-w-none mx-auto w-full' : ''
+              }`}
+            >
+              {/* 3D Illustration */}
+              <div className="w-full flex items-center justify-center h-16 sm:h-20 mb-2.5">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="max-h-full max-w-full object-contain filter drop-shadow-sm transition-transform duration-300 group-hover:scale-108"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Text Info */}
+              <div className="flex flex-col items-center my-auto w-full px-0.5">
+                <h3 className="text-xs sm:text-sm md:text-[15px] font-bold text-[#004737] group-hover:text-[#c48318] transition-colors leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-[11px] sm:text-xs text-gray-500 group-hover:text-gray-600 transition-colors leading-relaxed mt-1 line-clamp-2">
+                  {item.subtitle}
+                </p>
+              </div>
+
+              {/* Circular Action Indicator */}
+              <div className="mt-3 w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-[#f3cca0] bg-[#fffaf3] text-[#c48318] group-hover:bg-[#004737] group-hover:border-[#004737] group-hover:text-white transition-all duration-300 flex items-center justify-center shadow-xs flex-shrink-0">
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
+              </div>
             </div>
-
-            {/* 4 Cards Responsive Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2.5 sm:gap-3">
-              {insuranceProducts.map((item) => (
-                <div
-                  key={item.id}
-                  className="group bg-white rounded-xl p-2.5 xs:p-3 sm:p-2.5 md:p-3 pt-3 pb-2.5 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[148px] xs:min-h-[155px]"
-                >
-                  <div className="w-full flex items-center justify-center h-12 xs:h-14 sm:h-14 mb-1">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div className="flex flex-col items-center my-auto px-0.5">
-                    <h3 className="text-[11px] xs:text-xs font-bold text-[#05372d] group-hover:text-[#c98218] transition-colors leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-[9px] xs:text-[10px] text-gray-500 leading-tight mt-1 max-w-[105px]">
-                      {item.subtitle}
-                    </p>
-                  </div>
-
-                  <div className="mt-2 w-5 h-5 rounded-full border border-[#f3cca0] bg-[#fffaf3] text-[#d97706] group-hover:bg-[#d97706] group-hover:text-white transition-all flex items-center justify-center flex-shrink-0">
-                    <ArrowRight className="w-2.5 h-2.5" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
-
       </div>
+
+      {/* ================= 2. INSURANCE SOLUTIONS (Full Width, 4 Spacious Cards in Soft Frame) ================= */}
+      <div 
+        id="insurance-solutions" 
+        className="w-full bg-gradient-to-br from-[#f5f9f6] via-[#fafdfb] to-[#f3f8f5] border border-[#dfede5] rounded-2xl sm:rounded-3xl p-4.5 xs:p-6 sm:p-7 md:p-8 shadow-[0_2px_12px_rgba(0,71,55,0.02)]"
+      >
+        {/* Header */}
+        <div className="mb-5 sm:mb-6">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#fef5e7] text-[#9e6209] border border-[#c48318]/25 mb-2.5">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#c48318]" />
+            <span>IRDAI Certified Protection Plans</span>
+          </div>
+          <h2 className="text-2xl xs:text-3xl sm:text-[28px] font-bold tracking-tight">
+            <span className="text-[#004737]">Insurance </span>
+            <span className="text-[#c48318]">Solutions</span>
+          </h2>
+          <p className="text-xs sm:text-sm text-gray-500 mt-1 max-w-2xl leading-relaxed">
+            Authorized partner for Tata AIA and Tata AIG, offering transparent family protection and asset security with zero hidden fees.
+          </p>
+        </div>
+
+        {/* 4 Cards Grid: 4 columns on desktop/laptop 1024px, 2 on tablet/mobile */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-3.5 md:gap-4 lg:gap-5">
+          {insuranceProducts.map((item) => (
+            <div
+              key={item.id}
+              onClick={() => scrollToConsultation(item.title)}
+              role="button"
+              tabIndex={0}
+              className="group relative bg-white rounded-2xl p-3.5 sm:p-4 md:p-4.5 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-[#edebe7] hover:border-[#c48318]/50 hover:shadow-[0_12px_28px_rgba(0,71,55,0.08)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between text-center cursor-pointer min-h-[195px] sm:min-h-[215px]"
+            >
+              {/* 3D Illustration */}
+              <div className="w-full flex items-center justify-center h-16 sm:h-20 mb-2.5">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="max-h-full max-w-full object-contain filter drop-shadow-sm transition-transform duration-300 group-hover:scale-108"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Text Info */}
+              <div className="flex flex-col items-center my-auto w-full px-0.5">
+                <h3 className="text-xs sm:text-sm md:text-[15px] font-bold text-[#004737] group-hover:text-[#c48318] transition-colors leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-[11px] sm:text-xs text-gray-500 group-hover:text-gray-600 transition-colors leading-relaxed mt-1 line-clamp-2">
+                  {item.subtitle}
+                </p>
+              </div>
+
+              {/* Circular Action Indicator */}
+              <div className="mt-3 w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-[#f3cca0] bg-[#fffaf3] text-[#c48318] group-hover:bg-[#004737] group-hover:border-[#004737] group-hover:text-white transition-all duration-300 flex items-center justify-center shadow-xs flex-shrink-0">
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
     </section>
   );
 }
