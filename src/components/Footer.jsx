@@ -172,7 +172,7 @@ export default function Footer() {
 
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
+                  <a href="#about-us" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
                     <ChevronRight className="w-3.5 h-3.5 text-[#e5a93b] flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
                     <span>About Us</span>
                   </a>

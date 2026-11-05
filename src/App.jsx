@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SolutionsSection from './components/SolutionsSection';
 import WhyChooseUs from './components/WhyChooseUs';
+import AboutUs from './components/AboutUs';
 import FreeConsultation from './components/FreeConsultation';
 import Footer from './components/Footer';
 
@@ -18,13 +19,16 @@ export default function App() {
       {/* 3. Full-Width Product Solutions Section (Loan & Insurance) */}
       <SolutionsSection />
 
-      {/* 4. Why Choose Us Section */}
+      {/* 4. About Us Section (Placed on top of Why Choose Us) */}
+      <AboutUs />
+
+      {/* 5. Why Choose Us Section with Official Partner Logos */}
       <WhyChooseUs />
 
-      {/* 5. Get a Free Consultation Section */}
+      {/* 6. Get a Free Consultation Section */}
       <FreeConsultation />
 
-      {/* 6. Luxury Footer with Golden Wave Accent */}
+      {/* 7. Luxury Footer with Golden Wave Accent */}
       <Footer />
     </div>
   );
