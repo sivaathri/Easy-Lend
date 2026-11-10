@@ -6,6 +6,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import AboutUs from './components/AboutUs';
 import FreeConsultation from './components/FreeConsultation';
 import Footer from './components/Footer';
+import BackToTop from './components/BackToTop';
 
 export default function App() {
   return (
@@ -30,6 +31,9 @@ export default function App() {
 
       {/* 7. Luxury Footer with Golden Wave Accent */}
       <Footer />
+
+      {/* 8. Floating Back to Top Button */}
+      <BackToTop />
     </div>
   );
 }
