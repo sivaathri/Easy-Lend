@@ -265,28 +265,9 @@ export default function TrustedPartners({ className = '', centered = true }) {
   return (
     <div className={`w-full flex flex-col select-none ${centered ? 'items-center text-center' : 'items-start text-left'} ${className}`}>
       
-      {/* 1. Quick Navigation Jump Pills (No 'All Partners' tab) */}
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
-        {partnerSections.map((sec) => (
-          <a
-            key={sec.id}
-            href={`#${sec.id}`}
-            onClick={(e) => {
-              e.preventDefault();
-              const el = document.getElementById(sec.id);
-              if (el) {
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-            }}
-            className="px-4 py-1.5 rounded-full text-xs font-bold transition-all border bg-white text-[#004737] border-gray-200 hover:border-[#004737] hover:bg-[#004737] hover:text-white shadow-xs cursor-pointer flex items-center gap-1.5"
-          >
-            <span>{sec.tabLabel}</span>
-            <span className="text-[11px] opacity-75 font-semibold">({sec.partners.length})</span>
-          </a>
-        ))}
-      </div>
+     
 
-      {/* 2. Four Dedicated Separate Sections Stacked Sequentially */}
+      {/* 1. Four Dedicated Separate Sections Stacked Sequentially */}
       <div className="w-full flex flex-col gap-10 sm:gap-14">
         {partnerSections.map((sec, idx) => (
           <section key={sec.id} id={sec.id} className="w-full flex flex-col items-center text-center scroll-mt-24">
@@ -345,7 +326,7 @@ export default function TrustedPartners({ className = '', centered = true }) {
         ))}
       </div>
 
-      {/* 3. Minimalist Compliance Note */}
+      {/* 2. Minimalist Compliance Note */}
       <div className="mt-8 sm:mt-12 text-center">
         <p className="text-[11px] sm:text-xs text-gray-500 max-w-xl mx-auto leading-relaxed">
           *Eazy Lend provides certified financial advisory in association with RBI-regulated banks, NBFCs, and IRDAI-registered insurance companies. 
