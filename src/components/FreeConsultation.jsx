@@ -163,35 +163,44 @@ export default function FreeConsultation() {
                   </div>
                 </div>
 
-                {/* 3 Trust Feature Points with Amber Badges */}
-                <div className="space-y-3 sm:space-y-3.5 pb-1 flex-1">
+                {/* 3 Trust Feature Points with Amber Badges (Exact match to reference) */}
+                <div className="space-y-3.5 sm:space-y-4 pb-1 flex-1">
                   
                   {/* Point 1: Expert Guidance */}
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#fdf2dc] border border-[#f5dfb8] flex items-center justify-center flex-shrink-0 text-[#004737] shadow-2xs">
-                      <ShieldCheck className="w-4 h-4 text-[#004737]" />
+                  <div className="flex items-center gap-3 sm:gap-3.5">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#fde8c2] flex items-center justify-center flex-shrink-0 shadow-2xs">
+                      <svg className="w-5 h-5 text-[#043d30]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L4 5.5v5.5c0 5.2 3.4 10 8 11.2 4.6-1.2 8-6 8-11.2V5.5L12 2z" />
+                        <path d="M8.5 12l2.5 2.5 4.8-4.8" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
                     </div>
-                    <span className="text-xs sm:text-[13px] font-bold text-gray-900 leading-tight">
+                    <span className="text-[14px] sm:text-[15px] md:text-base font-bold text-[#043d30] tracking-tight">
                       Expert Guidance
                     </span>
                   </div>
 
                   {/* Point 2: Personalized Solutions */}
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#fdf2dc] border border-[#f5dfb8] flex items-center justify-center flex-shrink-0 text-[#004737] shadow-2xs">
-                      <HeartHandshake className="w-4 h-4 text-[#004737]" />
+                  <div className="flex items-center gap-3 sm:gap-3.5">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#fde8c2] flex items-center justify-center flex-shrink-0 shadow-2xs">
+                      <svg className="w-5 h-5 text-[#043d30]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 4.2c-.8-1-2.1-1.3-3.1-.6-.9.8-1 2.2-.2 3.1l3.3 3.3 3.3-3.3c.8-.9.7-2.3-.2-3.1-1-.7-2.3-.4-3.1.6z" />
+                        <path d="M2 13h3v5H2v-5zm4 1.5c0-.8.7-1.5 1.5-1.5H11c.4 0 .8.2 1.1.5l2.2 2.2c.3.3.7.5 1.1.5H21c.6 0 1-.4 1-1 0-.3-.1-.5-.3-.7l-3-2c-.3-.2-.5-.5-.5-.9V11c0-.6-.4-1-1-1h-3.7c-.5 0-1 .2-1.3.5L10 12V11c0-.6-.4-1-1-1H6v4.5z" />
+                      </svg>
                     </div>
-                    <span className="text-xs sm:text-[13px] font-bold text-gray-900 leading-tight">
+                    <span className="text-[14px] sm:text-[15px] md:text-base font-bold text-[#043d30] tracking-tight">
                       Personalized Solutions
                     </span>
                   </div>
 
                   {/* Point 3: Quick & Hassle-Free Process */}
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#fdf2dc] border border-[#f5dfb8] flex items-center justify-center flex-shrink-0 text-[#004737] shadow-2xs">
-                      <Clock className="w-4 h-4 text-[#004737]" />
+                  <div className="flex items-center gap-3 sm:gap-3.5">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#fde8c2] flex items-center justify-center flex-shrink-0 shadow-2xs">
+                      <svg className="w-5 h-5 text-[#043d30]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="8.5" />
+                        <polyline points="12 7.5 12 12 15 14.5" />
+                      </svg>
                     </div>
-                    <span className="text-xs sm:text-[13px] font-bold text-gray-900 leading-tight">
+                    <span className="text-[14px] sm:text-[15px] md:text-base font-bold text-[#043d30] tracking-tight">
                       Quick & Hassle-Free Process
                     </span>
                   </div>
