@@ -18,26 +18,33 @@ export default function Hero() {
 
         {/* Talk to an Advisor Button */}
         <a
-          href="#contact"
+          href="#free-consultation"
+          onClick={(e) => {
+            e.preventDefault();
+            const el = document.getElementById('free-consultation');
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
           className="absolute left-[6.5%] bottom-[17%]
-          inline-flex items-center justify-center gap-3
-          px-5 py-2.5 md:px-7 md:py-3.5
+          inline-flex items-center justify-center gap-1.5 sm:gap-2.5 md:gap-3
+          px-3.5 py-1.5 xs:px-4 xs:py-2 sm:px-5 sm:py-2.5 md:px-7 md:py-3.5
           rounded-full
           bg-gradient-to-b from-[#07875b] to-[#004b34]
           text-white font-semibold
-          text-sm md:text-base lg:text-lg
+          text-xs sm:text-sm md:text-base lg:text-lg
           shadow-lg shadow-green-900/20
           border border-green-700/30
           hover:from-[#069b68] hover:to-[#006343]
-          hover:scale-105
+          hover:scale-105 active:scale-95
           transition-all duration-300
-          whitespace-nowrap"
+          whitespace-nowrap cursor-pointer z-10"
         >
-          <Phone size={20} fill="white" />
+          <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white fill-white" />
 
           <span>Talk to an Advisor</span>
 
-          <ArrowRight size={20} />
+          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
         </a>
 
       </div>
