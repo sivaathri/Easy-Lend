@@ -7,7 +7,7 @@ export default function TrustedPartners({ className = '', centered = true }) {
       {/* 1. Heading: Our Trusted Partners ── */}
       <div className={`flex items-center gap-2.5 mb-1 ${centered ? 'justify-center' : 'justify-start'}`}>
         <h3 className="text-lg xs:text-xl sm:text-2xl md:text-[26px] font-bold tracking-tight leading-snug">
-          <span className="text-[#004737]">Our Trusted </span>
+          <span className="text-[#004737]">Our Insurance </span>
           <span className="text-[#c48318]">Partners</span>
         </h3>
         {/* Golden Dash / Horizontal Accent Line */}
