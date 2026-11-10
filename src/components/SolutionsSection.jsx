@@ -6,31 +6,31 @@ const loanProducts = [
     id: 'home-loan',
     title: 'Home Loan',
     subtitle: 'Fulfill Your Dream of a Home',
-    image: '/assets/icon-home.png',
+    image: '/assets/icon-home-hd.jpg',
   },
   {
     id: 'personal-loan',
     title: 'Personal Loan',
     subtitle: 'Easy Access to Personal Funds',
-    image: '/assets/icon-personal.png',
+    image: '/assets/icon-personal-hd.jpg',
   },
   {
     id: 'business-loan',
     title: 'Business Loan',
     subtitle: 'Scale Your Business Ambitions',
-    image: '/assets/icon-business.png',
+    image: '/assets/icon-business-hd.jpg',
   },
   {
     id: 'mortgage-loan',
     title: 'Mortgage Loan',
     subtitle: 'Secured Property Financing',
-    image: '/assets/icon-mortgage.png',
+    image: '/assets/icon-mortgage-hd.jpg',
   },
   {
     id: 'working-capital',
     title: 'Working Capital',
     subtitle: 'OD / CC / UCL for Your Business',
-    image: '/assets/icon-capital.png',
+    image: '/assets/icon-capital-hd.jpg',
     isFifth: true,
   },
 ];
@@ -40,25 +40,25 @@ const insuranceProducts = [
     id: 'health-insurance',
     title: 'Health Insurance',
     subtitle: 'Comprehensive Health Coverage',
-    image: '/assets/icon-health.png',
+    image: '/assets/icon-health-hd.jpg',
   },
   {
     id: 'life-insurance',
     title: 'Life Insurance',
     subtitle: "Secure Your Family's Future",
-    image: '/assets/icon-life.png',
+    image: '/assets/icon-life-hd.jpg',
   },
   {
     id: 'term-insurance',
     title: 'Term Insurance',
     subtitle: 'Life Coverage for Your Family',
-    image: '/assets/icon-term.png',
+    image: '/assets/icon-term-hd.jpg',
   },
   {
     id: 'vehicle-insurance',
     title: 'Vehicle Insurance',
     subtitle: 'Secure Your Journey',
-    image: '/assets/icon-vehicle.png',
+    image: '/assets/icon-vehicle-hd.jpg',
   },
 ];
 
@@ -90,11 +90,11 @@ export default function SolutionsSection() {
                     item.isFifth ? 'col-span-2 sm:col-span-1 max-w-[240px] xs:max-w-[280px] sm:max-w-none mx-auto w-full' : ''
                   }`}
                 >
-                  <div className="w-full flex items-center justify-center h-12 xs:h-14 sm:h-14 mb-1">
+                  <div className="w-full flex items-center justify-center h-14 xs:h-16 sm:h-16 mb-1.5">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105"
+                      className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-2xs"
                       loading="lazy"
                     />
                   </div>
@@ -138,11 +138,11 @@ export default function SolutionsSection() {
                   key={item.id}
                   className="group bg-white rounded-xl p-2.5 xs:p-3 sm:p-2.5 md:p-3 pt-3 pb-2.5 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[148px] xs:min-h-[155px]"
                 >
-                  <div className="w-full flex items-center justify-center h-12 xs:h-14 sm:h-14 mb-1">
+                  <div className="w-full flex items-center justify-center h-14 xs:h-16 sm:h-16 mb-1.5">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105"
+                      className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-2xs"
                       loading="lazy"
                     />
                   </div>

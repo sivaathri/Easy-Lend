@@ -16,21 +16,21 @@ const serviceGroups = [
     category: 'Loan Solutions',
     badgeColor: 'bg-[#e6f4ed] text-[#004737]',
     items: [
-      { id: 'home-loan', name: 'Home Loan', image: '/assets/icon-home.png', desc: 'Fulfill dream of a home' },
-      { id: 'personal-loan', name: 'Personal Loan', image: '/assets/icon-personal.png', desc: 'Instant personal funds' },
-      { id: 'business-loan', name: 'Business Loan', image: '/assets/icon-business.png', desc: 'Scale business ambitions' },
-      { id: 'mortgage-loan', name: 'Mortgage Loan', image: '/assets/icon-mortgage.png', desc: 'Secured property finance' },
-      { id: 'working-capital', name: 'Working Capital', image: '/assets/icon-capital.png', desc: 'OD / CC / UCL facilities' }
+      { id: 'home-loan', name: 'Home Loan', image: '/assets/icon-home-hd.jpg', desc: 'Fulfill dream of a home' },
+      { id: 'personal-loan', name: 'Personal Loan', image: '/assets/icon-personal-hd.jpg', desc: 'Instant personal funds' },
+      { id: 'business-loan', name: 'Business Loan', image: '/assets/icon-business-hd.jpg', desc: 'Scale business ambitions' },
+      { id: 'mortgage-loan', name: 'Mortgage Loan', image: '/assets/icon-mortgage-hd.jpg', desc: 'Secured property finance' },
+      { id: 'working-capital', name: 'Working Capital', image: '/assets/icon-capital-hd.jpg', desc: 'OD / CC / UCL facilities' }
     ]
   },
   {
     category: 'Insurance Solutions',
     badgeColor: 'bg-[#fef5e7] text-[#b87a14]',
     items: [
-      { id: 'health-insurance', name: 'Health Insurance', image: '/assets/icon-health.png', desc: 'Comprehensive medical cover' },
-      { id: 'life-insurance', name: 'Life Insurance', image: '/assets/icon-life.png', desc: "Secure your family's future" },
-      { id: 'term-insurance', name: 'Term Insurance', image: '/assets/icon-term.png', desc: 'High sum assured protection' },
-      { id: 'vehicle-insurance', name: 'Vehicle Insurance', image: '/assets/icon-vehicle.png', desc: 'Complete journey security' }
+      { id: 'health-insurance', name: 'Health Insurance', image: '/assets/icon-health-hd.jpg', desc: 'Comprehensive medical cover' },
+      { id: 'life-insurance', name: 'Life Insurance', image: '/assets/icon-life-hd.jpg', desc: "Secure your family's future" },
+      { id: 'term-insurance', name: 'Term Insurance', image: '/assets/icon-term-hd.jpg', desc: 'High sum assured protection' },
+      { id: 'vehicle-insurance', name: 'Vehicle Insurance', image: '/assets/icon-vehicle-hd.jpg', desc: 'Complete journey security' }
     ]
   }
 ];
