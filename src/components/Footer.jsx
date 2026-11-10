@@ -102,7 +102,7 @@ export default function Footer() {
                 {/* Brand Logo matching exact uploaded asset */}
                 <a href="#" className="inline-block select-none mb-3 sm:mb-4 group">
                   <img 
-                    src="/assets/footer-logo-transparent.png" 
+                    src="/logo.png" 
                     alt="EazyLend Loans & Insurance" 
                     className="h-10 xs:h-11 sm:h-12 w-auto object-contain -ml-1 transition-transform duration-200 group-hover:scale-[1.02]"
                     onError={(e) => {
