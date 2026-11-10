@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 84" width="270" height="84" fill="none">
+  <!-- Official Government of India IRDAI Emblem (Left) -->
+  <g transform="translate(6, 4) scale(0.63)">
+    <!-- Red Dot -->
+    <path d="M39 15.48c4.31 0 7.8-3.47 7.8-7.74C46.8 3.47 43.31 0 39 0c-4.31 0-7.8 3.47-7.8 7.74 0 4.28 3.49 7.74 7.8 7.74z" fill="#EC1E26"/>
+    <!-- Blue Base Bar -->
+    <path d="M78 72H0v15h78V72z" fill="#1E2A78"/>
+    <!-- Center Blue Column -->
+    <path d="M46.8 18H31.2v51h15.6V18z" fill="#1E2A78"/>
+    <!-- Grey Left Wing -->
+    <path d="M22.06 18L0 69h22.06h6.02V18h-6.02z" fill="#7E93A3"/>
+    <!-- Grey Right Wing -->
+    <path d="M55.94 18L78 69H55.94H49.92V18h6.02z" fill="#7E93A3"/>
+    <!-- White Hindi Inscription inside Blue Bar -->
+    <g fill="#FFFFFF" transform="translate(4, 76) scale(0.92)">
+      <text x="36" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="900" text-anchor="middle" letter-spacing="1.5">भा बी वि वि प्रा</text>
+    </g>
+    <!-- Bold irdai blue text below bar -->
+    <text x="39" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#1E2A78" text-anchor="middle" letter-spacing="-0.5">irdai</text>
+  </g>
+
+  <!-- High-Legibility Regulatory Identity (Right) -->
+  <g transform="translate(64, 0)">
+    <!-- Main Acronym: IRDAI -->
+    <text x="0" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="33" font-weight="900" fill="#1E2A78" letter-spacing="1.5">IRDAI</text>
+    
+    <!-- Subtitle: Full Institutional Descriptor -->
+    <text x="1" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="800" fill="#64748B" letter-spacing="0.8">INSURANCE REGULATORY AUTHORITY</text>
+    <text x="1" y="69" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="800" fill="#004737" letter-spacing="0.5">AUTHORIZED ADVISORY</text>
+  </g>
+</svg>

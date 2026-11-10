@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <rect width="500" height="500" rx="100" fill="#700619"/>
+  <defs>
+    <linearGradient id="goldGradFav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF5B7"/>
+      <stop offset="30%" stop-color="#DAA520"/>
+      <stop offset="70%" stop-color="#AA771C"/>
+      <stop offset="100%" stop-color="#FBF5B7"/>
+    </linearGradient>
+  </defs>
+  {/* Crown Symbol */}
+  <path d="M 160 140 L 200 190 L 250 125 L 300 190 L 340 140 L 360 210 L 140 210 Z" fill="url(#goldGradFav)"/>
+  <circle cx="160" cy="130" r="10" fill="url(#goldGradFav)"/>
+  <circle cx="250" cy="115" r="12" fill="url(#goldGradFav)"/>
+  <circle cx="340" cy="130" r="10" fill="url(#goldGradFav)"/>
+  {/* Monogram RA */}
+  <text x="250" y="310" text-anchor="middle" fill="#FFFFFF" font-family="'Cinzel', serif" font-weight="800" font-size="160">RA</text>
+  <text x="250" y="380" text-anchor="middle" fill="#FFFFFF" font-family="'Cinzel', serif" font-weight="700" font-size="34" letter-spacing="3">RAJALAKSHMY</text>
+  <text x="250" y="425" text-anchor="middle" fill="url(#goldGradFav)" font-family="'Cinzel', serif" font-weight="600" font-size="22" letter-spacing="6">ASSOCIATES</text>
+</svg>

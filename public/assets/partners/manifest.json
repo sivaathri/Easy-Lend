@@ -1,0 +1,150 @@
+{
+  "sbi": {
+    "status": "success",
+    "source": "wikimedia",
+    "file": "sbi.svg"
+  },
+  "axis-bank": {
+    "status": "failed"
+  },
+  "hdfc-bank": {
+    "status": "success",
+    "source": "wikimedia",
+    "file": "hdfc-bank.svg"
+  },
+  "icici-bank": {
+    "status": "success",
+    "source": "wikimedia",
+    "file": "icici-bank.svg"
+  },
+  "kotak-bank": {
+    "status": "success",
+    "source": "wikimedia",
+    "file": "kotak-bank.svg"
+  },
+  "indian-bank": {
+    "status": "failed"
+  },
+  "esaf-bank": {
+    "status": "failed"
+  },
+  "indusind-bank": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=indusind.com&sz=256",
+    "file": "indusind-bank.png"
+  },
+  "dcb-bank": {
+    "status": "failed"
+  },
+  "bandhan-bank": {
+    "status": "failed"
+  },
+  "icici-home-finance": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=icicihfc.com&sz=256",
+    "file": "icici-home-finance.png"
+  },
+  "aditya-birla-capital": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=adityabirlacapital.com&sz=256",
+    "file": "aditya-birla-capital.png"
+  },
+  "aditya-birla-housing": {
+    "status": "failed"
+  },
+  "homefirst-finance": {
+    "status": "failed"
+  },
+  "bajaj-finance": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=bajajfinserv.in&sz=256",
+    "file": "bajaj-finance.png"
+  },
+  "veritas-finance": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=veritasfin.in&sz=256",
+    "file": "veritas-finance.png"
+  },
+  "aadhar-housing": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=aadharhousing.com&sz=256",
+    "file": "aadhar-housing.png"
+  },
+  "tata-aia": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=tataaia.com&sz=256",
+    "file": "tata-aia.png"
+  },
+  "tata-aig": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=tataaig.com&sz=256",
+    "file": "tata-aig.png"
+  },
+  "star-health": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=starhealth.in&sz=256",
+    "file": "star-health.png"
+  },
+  "icici-lombard": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=icicilombard.com&sz=256",
+    "file": "icici-lombard.png"
+  },
+  "hdfc-ergo": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=hdfcergo.com&sz=256",
+    "file": "hdfc-ergo.png"
+  },
+  "aditya-birla-sunlife": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=lifeinsurance.adityabirlacapital.com&sz=256",
+    "file": "aditya-birla-sunlife.png"
+  },
+  "aditya-birla-health": {
+    "status": "failed"
+  },
+  "kotak-life": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=kotaklife.com&sz=256",
+    "file": "kotak-life.png"
+  },
+  "bajaj-allianz": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=bajajallianz.com&sz=256",
+    "file": "bajaj-allianz.png"
+  },
+  "irdai-auth": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=irdai.gov.in&sz=256",
+    "file": "irdai-auth.png"
+  },
+  "rajalakshmi": {
+    "status": "failed"
+  },
+  "capital-grow": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=capitalgrothfinance.com&sz=256",
+    "file": "capital-grow.png"
+  },
+  "finwizz": {
+    "status": "failed"
+  },
+  "andromeda": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=andromedaloans.com&sz=256",
+    "file": "andromeda.png"
+  },
+  "ruloans": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=ruloans.com&sz=256",
+    "file": "ruloans.png"
+  },
+  "aadifidelis": {
+    "status": "success",
+    "source": "https://www.google.com/s2/favicons?domain=aadifidelissolutions.com&sz=256",
+    "file": "aadifidelis.png"
+  },
+  "starpowerz": {
+    "status": "failed"
+  }
+}
