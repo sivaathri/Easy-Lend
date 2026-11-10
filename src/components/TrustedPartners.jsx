@@ -263,7 +263,7 @@ const partnerSections = [
 
 export default function TrustedPartners({ className = '', centered = true }) {
   return (
-    <div className={`w-full flex flex-col select-none ${centered ? 'items-center text-center' : 'items-start text-left'} ${className}`}>
+    <div id="partners" className={`w-full flex flex-col select-none scroll-mt-24 ${centered ? 'items-center text-center' : 'items-start text-left'} ${className}`}>
       
      
 

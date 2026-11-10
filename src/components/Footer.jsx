@@ -190,13 +190,13 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
+                  <a href="#partners" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
                     <ChevronRight className="w-3.5 h-3.5 text-[#e5a93b] flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
-                    <span>FAQs</span>
+                    <span>Our Partners</span>
                   </a>
                 </li>
                 <li>
-                  <a href="tel:9659590505" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
+                  <a href="#free-consultation" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
                     <ChevronRight className="w-3.5 h-3.5 text-[#e5a93b] flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
                     <span>Contact Us</span>
                   </a>
