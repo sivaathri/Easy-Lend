@@ -41,11 +41,11 @@ export default function AboutUs() {
           <div className="relative z-10 flex flex-col lg:flex-row items-stretch justify-between">
             
             {/* ================= 1. LEFT: Plant & Coins Visual ================= */}
-            <div className="lg:w-[26%] xl:w-[25%] flex-shrink-0 relative overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#f7fbf8] to-white lg:bg-none">
+            <div className="lg:w-[28%] xl:w-[27%] flex-shrink-0 relative overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#f7fbf8] to-white lg:bg-none">
               <img 
-                src="/assets/about-plant-coins.png" 
-                alt="Eazy Lend Financial Growth" 
-                className="w-full h-44 xs:h-48 sm:h-52 lg:h-full object-cover lg:object-left object-center [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] lg:[mask-image:linear-gradient(to_right,black_85%,transparent_100%)] select-none pointer-events-none"
+                src="/assets/about-plant-coins-hd.jpg" 
+                alt="Eazy Lend Financial Growth - Investment and Savings" 
+                className="w-full h-48 xs:h-52 sm:h-56 lg:h-full object-cover lg:object-left object-center [mask-image:linear-gradient(to_bottom,black_82%,transparent_100%)] lg:[mask-image:linear-gradient(to_right,black_86%,transparent_100%)] select-none pointer-events-none"
                 loading="lazy"
               />
             </div>
@@ -56,7 +56,7 @@ export default function AboutUs() {
               {/* Eyebrow: ABOUT US ── */}
               <div className="flex items-center gap-2 mb-1.5">
                 <span className="text-xs sm:text-[13px] font-bold text-[#c98218] tracking-wider uppercase">
-                  ABOUT US
+                  ABOUT US    
                 </span>
                 <span className="inline-block w-8 sm:w-10 h-[2px] bg-[#c98218] rounded-full" />
               </div>
