@@ -212,7 +212,7 @@ const dsaPartners = [
     id: 'aadifidelis',
     name: 'Aadifidelis',
     category: 'DSA Partner',
-    logoSrc: '/assets/partners/aadifidelis.png'
+    logoSrc: '/assets/partners/aadifidelis.svg'
   },
   {
     id: 'starpowerz',
@@ -309,7 +309,7 @@ export default function TrustedPartners({ className = '', centered = true }) {
                   <img
                     src={item.logoSrc}
                     alt={item.name}
-                    className="max-h-[46px] sm:max-h-[52px] max-w-[88%] w-auto h-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                    className="max-h-[48px] sm:max-h-[54px] md:max-h-[56px] max-w-[90%] w-auto h-auto object-contain transition-transform duration-200 group-hover:scale-105"
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
