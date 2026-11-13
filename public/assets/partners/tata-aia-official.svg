@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 36" fill="none">
+  <!-- TATA in blue -->
+  <text x="0" y="20" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="20" font-weight="900" fill="#0072BC" letter-spacing="0.5">TATA</text>
+  <!-- AIA in red -->
+  <text x="64" y="20" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="20" font-weight="900" fill="#D62049" letter-spacing="0.5">AIA</text>
+  <!-- Indicator bars -->
+  <rect x="0" y="26" width="14" height="3" fill="#0072BC" rx="1.5" />
+  <rect x="18" y="26" width="14" height="3" fill="#D62049" rx="1.5" />
+  <!-- LIFE INSURANCE subtitle -->
+  <text x="38" y="29.5" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="7" font-weight="800" fill="#374151" letter-spacing="0.8">LIFE INSURANCE</text>
+</svg>
