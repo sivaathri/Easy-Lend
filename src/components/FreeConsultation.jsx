@@ -129,12 +129,6 @@ export default function FreeConsultation() {
             <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-between">
               <div>
                 {/* Pill Badge: Free Consultation with Headset */}
-                <div className="inline-flex items-center gap-2 bg-[#fef1db] border border-[#f9dfbe] px-3.5 py-1.5 rounded-full mb-3 shadow-2xs w-fit">
-                  <Headphones className="w-3.5 h-3.5 text-[#b87a14]" />
-                  <span className="text-[11.5px] sm:text-xs font-bold text-[#1f382b] tracking-wide">
-                    Free Consultation
-                  </span>
-                </div>
 
                 {/* Main Heading */}
                 <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-[40px] font-bold tracking-tight leading-[1.12] mb-2 sm:mb-2.5">
