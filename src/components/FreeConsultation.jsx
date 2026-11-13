@@ -32,7 +32,10 @@ const serviceGroups = [
       { id: 'health-insurance', name: 'Health Insurance', image: '/assets/icon-health-hd.jpg', desc: 'Comprehensive medical cover' },
       { id: 'life-insurance', name: 'Life Insurance', image: '/assets/icon-life-hd.jpg', desc: "Secure your family's future" },
       { id: 'term-insurance', name: 'Term Insurance', image: '/assets/icon-term-hd.jpg', desc: 'Life coverage for your family' },
-      { id: 'vehicle-insurance', name: 'Vehicle Insurance', image: '/assets/icon-vehicle-hd.jpg', desc: 'Complete journey security' }
+      { id: 'vehicle-insurance', name: 'Vehicle Insurance', image: '/assets/icon-vehicle-hd.jpg', desc: 'Complete journey security' },
+      { id: 'stock-insurance', name: 'Stock Insurance', image: '/assets/icon-stock-hd.jpg', desc: 'Protect inventory & goods' },
+      { id: 'shop-insurance', name: 'Shop Insurance', image: '/assets/icon-shop-hd.jpg', desc: 'Secure your retail business' },
+      { id: 'property-insurance', name: 'Property Insurance', image: '/assets/icon-property-hd.jpg', desc: 'Asset & property security' }
     ]
   }
 ];

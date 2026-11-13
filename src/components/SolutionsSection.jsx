@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const loanProducts = [
   {
@@ -31,7 +31,6 @@ const loanProducts = [
     title: 'Working Capital',
     subtitle: 'OD / CC / UCL for Your Business',
     image: '/assets/icon-capital-hd.jpg',
-    isFifth: true,
   },
 ];
 
@@ -60,9 +59,33 @@ const insuranceProducts = [
     subtitle: 'Secure Your Journey',
     image: '/assets/icon-vehicle-hd.jpg',
   },
+  {
+    id: 'stock-insurance',
+    title: 'Stock Insurance',
+    subtitle: 'Protect Your Inventory',
+    image: '/assets/icon-stock-hd.jpg',
+  },
+  {
+    id: 'shop-insurance',
+    title: 'Shop Insurance',
+    subtitle: 'Secure Your Retail Business',
+    image: '/assets/icon-shop-hd.jpg',
+  },
+  {
+    id: 'property-insurance',
+    title: 'Property Insurance',
+    subtitle: 'Comprehensive Asset Security',
+    image: '/assets/icon-property-hd.jpg',
+  },
 ];
 
 export default function SolutionsSection() {
+  const [showAllLoans, setShowAllLoans] = useState(false);
+  const [showAllInsurance, setShowAllInsurance] = useState(false);
+
+  const displayedLoans = showAllLoans ? loanProducts : loanProducts.slice(0, 4);
+  const displayedInsurance = showAllInsurance ? insuranceProducts : insuranceProducts.slice(0, 4);
+
   return (
     <section className="w-full px-2.5 xs:px-3.5 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-6 sm:py-8 md:py-10">
       <div className="w-full max-w-[1720px] mx-auto">
@@ -79,40 +102,53 @@ export default function SolutionsSection() {
           </p>
         </div>
 
-        {/* ================= 2. TWO SIDE-BY-SIDE PANELS ================= */}
+        {/* ================= 2. TWO SIDE-BY-SIDE PANELS (Equal 50/50 balance) ================= */}
         <div className="flex flex-col lg:flex-row gap-4 sm:gap-5 lg:gap-5 xl:gap-6 items-stretch w-full">
           
-          {/* ================= LOAN SERVICES PANEL (5 Cards, ~56% width) ================= */}
+          {/* ================= LOANS PANEL (4 in row, View All expandable) ================= */}
           <div 
             id="loan-solutions" 
-            className="flex-1 lg:w-[56%] bg-[#fcfbf7] border border-[#ede7dc] rounded-2xl md:rounded-[24px] p-3.5 sm:p-4.5 md:p-5 lg:p-6 flex flex-col justify-between shadow-[0_2px_12px_rgba(0,0,0,0.02)] scroll-mt-24"
+            className="flex-1 lg:w-1/2 bg-[#fcfbf7] border border-[#ede7dc] rounded-2xl md:rounded-[24px] p-3.5 sm:p-4.5 md:p-5 lg:p-6 flex flex-col justify-between shadow-[0_2px_12px_rgba(0,0,0,0.02)] scroll-mt-24 transition-all duration-300"
           >
             <div>
-              {/* Header */}
-              <div className="flex items-center gap-3 mb-4 sm:mb-4.5">
-                <img 
-                  src="/assets/header-loan-coins-hd.jpg" 
-                  alt="Loan Services" 
-                  className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 object-contain flex-shrink-0 drop-shadow-2xs mix-blend-multiply" 
-                />
-                <div>
-                  <h3 className="text-base sm:text-lg md:text-[20px] font-bold text-[#004737] tracking-tight leading-snug">
-                    Loan 
-                  </h3>
-                  <p className="text-[11.5px] sm:text-xs text-gray-500 leading-tight mt-0.5">
-                    Flexible loan solutions to help you achieve your dreams.
-                  </p>
+              {/* Header with View All Toggle Button */}
+              <div className="flex items-center justify-between gap-3 mb-4 sm:mb-4.5">
+                <div className="flex items-center gap-3">
+                  <img 
+                    src="/assets/header-loan-coins-hd.jpg" 
+                    alt="Loan Services" 
+                    className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 object-contain flex-shrink-0 drop-shadow-2xs mix-blend-multiply" 
+                  />
+                  <div>
+                    <h3 className="text-base sm:text-lg md:text-[20px] font-bold text-[#004737] tracking-tight leading-snug">
+                      Loans
+                    </h3>
+                    <p className="text-[11.5px] sm:text-xs text-gray-500 leading-tight mt-0.5">
+                      Flexible loan solutions to help you achieve your dreams.
+                    </p>
+                  </div>
                 </div>
+
+                {/* View All (5) / Show Less Toggle Button */}
+                {loanProducts.length > 4 && (
+                  <button
+                    type="button"
+                    onClick={() => setShowAllLoans(prev => !prev)}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#004737] hover:text-[#c98218] bg-[#e6f4ed] hover:bg-[#d5ede0] active:scale-95 px-3 py-1.5 rounded-full transition-all cursor-pointer whitespace-nowrap shadow-2xs"
+                    title={showAllLoans ? "Show only top 4" : "View all loan services"}
+                  >
+                    <span>{showAllLoans ? 'Show Less' : `View All (${loanProducts.length})`}</span>
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${showAllLoans ? 'rotate-180' : ''}`} />
+                  </button>
+                )}
               </div>
 
-              {/* 5 Cards Responsive Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-2.5 sm:gap-3 md:gap-3.5">
-                {loanProducts.map((item) => (
+              {/* 4 Cards in a Row Grid (Expandable) */}
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2.5 sm:gap-3 md:gap-3.5">
+                {displayedLoans.map((item) => (
                   <div
                     key={item.id}
-                    className={`group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px] ${
-                      item.isFifth ? 'col-span-2 sm:col-span-1 max-w-[240px] xs:max-w-[280px] sm:max-w-none mx-auto w-full' : ''
-                    }`}
+                    className="group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px] animate-in fade-in-50 duration-200"
                   >
                     <div className="w-full flex items-center justify-center h-14 xs:h-16 sm:h-18 mb-1.5">
                       <img
@@ -141,35 +177,50 @@ export default function SolutionsSection() {
             </div>
           </div>
 
-          {/* ================= INSURANCE SERVICES PANEL (4 Cards, ~44% width) ================= */}
+          {/* ================= INSURANCE PANEL (4 in row, View All expandable) ================= */}
           <div 
             id="insurance-solutions" 
-            className="lg:w-[44%] bg-[#fcfbf7] border border-[#ede7dc] rounded-2xl md:rounded-[24px] p-3.5 sm:p-4.5 md:p-5 lg:p-6 flex flex-col justify-between shadow-[0_2px_12px_rgba(0,0,0,0.02)] scroll-mt-24"
+            className="flex-1 lg:w-1/2 bg-[#fcfbf7] border border-[#ede7dc] rounded-2xl md:rounded-[24px] p-3.5 sm:p-4.5 md:p-5 lg:p-6 flex flex-col justify-between shadow-[0_2px_12px_rgba(0,0,0,0.02)] scroll-mt-24 transition-all duration-300"
           >
             <div>
-              {/* Header */}
-              <div className="flex items-center gap-3 mb-4 sm:mb-4.5">
-                <img 
-                  src="/assets/header-insurance-shield-hd.jpg" 
-                  alt="Insurance Services" 
-                  className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 object-contain flex-shrink-0 drop-shadow-2xs mix-blend-multiply" 
-                />
-                <div>
-                  <h3 className="text-base sm:text-lg md:text-[20px] font-bold text-[#004737] tracking-tight leading-snug">
-                    Insurance 
-                  </h3>
-                  <p className="text-[11.5px] sm:text-xs text-gray-500 leading-tight mt-0.5">
-                    Comprehensive insurance plans for a secure tomorrow.
-                  </p>
+              {/* Header with View All Toggle Button */}
+              <div className="flex items-center justify-between gap-3 mb-4 sm:mb-4.5">
+                <div className="flex items-center gap-3">
+                  <img 
+                    src="/assets/header-insurance-shield-hd.jpg" 
+                    alt="Insurance Services" 
+                    className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 object-contain flex-shrink-0 drop-shadow-2xs mix-blend-multiply" 
+                  />
+                  <div>
+                    <h3 className="text-base sm:text-lg md:text-[20px] font-bold text-[#004737] tracking-tight leading-snug">
+                      Insurance 
+                    </h3>
+                    <p className="text-[11.5px] sm:text-xs text-gray-500 leading-tight mt-0.5">
+                      Comprehensive insurance plans for a secure tomorrow.
+                    </p>
+                  </div>
                 </div>
+
+                {/* View All (7) / Show Less Toggle Button */}
+                {insuranceProducts.length > 4 && (
+                  <button
+                    type="button"
+                    onClick={() => setShowAllInsurance(prev => !prev)}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#004737] hover:text-[#c98218] bg-[#e6f4ed] hover:bg-[#d5ede0] active:scale-95 px-3 py-1.5 rounded-full transition-all cursor-pointer whitespace-nowrap shadow-2xs"
+                    title={showAllInsurance ? "Show only top 4" : "View all insurance services"}
+                  >
+                    <span>{showAllInsurance ? 'Show Less' : `View All (${insuranceProducts.length})`}</span>
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${showAllInsurance ? 'rotate-180' : ''}`} />
+                  </button>
+                )}
               </div>
 
-              {/* 4 Cards Responsive Grid */}
+              {/* 4 Cards in a Row Grid (Expandable) */}
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2.5 sm:gap-3 md:gap-3.5">
-                {insuranceProducts.map((item) => (
+                {displayedInsurance.map((item) => (
                   <div
                     key={item.id}
-                    className="group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px]"
+                    className="group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px] animate-in fade-in-50 duration-200"
                   >
                     <div className="w-full flex items-center justify-center h-14 xs:h-16 sm:h-18 mb-1.5">
                       <img
