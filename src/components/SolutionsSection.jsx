@@ -1,5 +1,13 @@
-import React, { useState } from 'react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { 
+  ArrowRight, 
+  ChevronDown, 
+  X, 
+  Sparkles, 
+  User, 
+  FileText, 
+  CheckCircle2 
+} from 'lucide-react';
 
 const loanProducts = [
   {
@@ -79,12 +87,179 @@ const insuranceProducts = [
   },
 ];
 
+const loanModalDetails = {
+  'home-loan': {
+    id: 'home-loan',
+    title: 'Home Loan',
+    badge: 'PSU & Private Banks',
+    subtitle: 'Fulfill your dream of a home • Complete details, criteria & documents',
+    image: '/assets/icon-home-hd.jpg',
+    applyLabel: 'Apply for Home Loan',
+    guidance: 'Need guidance? Our Puducherry advisors are ready to assist with full documentation.',
+    benefits: [
+      'Attractive interest rates from top PSU & Private banks',
+      'Longest repayment tenure up to 30 years',
+      'PMAY Subsidy assistance & Balance Transfer facility',
+      'Up to 80% to 90% property value financing'
+    ],
+    eligibility: [
+      'Salaried & self-employed individuals',
+      'Age between 21 and 65 years',
+      'Stable source of regular income',
+      'Clear legal title of the property'
+    ],
+    documents: [
+      'Basic KYC (Applicant & Co-applicant): Aadhaar, PAN',
+      'If both are salaried: Last 3 months payslips, last 6 months bank account statement',
+      'If one is salaried & one is business (Salaried): Last 3 months payslips, last 6 months bank account statement',
+      'If one is salaried & one is business (Business): Last 2 years IT papers, GST certificate, MSME certificate, last 1 year bank account statement (current/savings/OD)',
+      'Property documents: Full set including mother document / parent document, patta, EC, house tax, EB bill, water tax',
+      'For construction: Approval copy or plan and estimation copy',
+      'Photos: 3 passport size photos each for applicant and co-applicant',
+      'Note: Additional income (rental, home business, other business, agricultural, etc.) can also be considered with valid supporting documents as per lender policy.'
+    ]
+  },
+  'personal-loan': {
+    id: 'personal-loan',
+    title: 'Personal Loan',
+    badge: 'Instant Approval & Disbursal',
+    subtitle: 'Easy access to personal funds • Complete details, criteria & documents',
+    image: '/assets/icon-personal-laptop-hd.jpg',
+    applyLabel: 'Apply for Personal Loan',
+    guidance: 'Need funds quickly? Our Puducherry advisors are ready to assist with rapid approval.',
+    benefits: [
+      'No collateral or guarantor required',
+      'Quick approval & disbursal within 24-48 hours',
+      'Flexible repayment tenure from 12 to 60 months',
+      'Competitive interest rates with minimal documentation'
+    ],
+    eligibility: [
+      'Salaried employees & self-employed professionals',
+      'Age between 21 and 60 years',
+      'Minimum monthly net income of ₹20,000',
+      'CIBIL score of 700+ preferred'
+    ],
+    documents: [
+      'Aadhaar Card',
+      'PAN Card',
+      'Last 3 months payslips',
+      'Last 6 months bank account statement',
+      'Employee ID card',
+      'Form 16'
+    ]
+  },
+  'business-loan': {
+    id: 'business-loan',
+    title: 'Business Loan',
+    badge: 'Up to ₹1 Crore Collateral-Free',
+    subtitle: 'Scale your business ambitions • Complete details, criteria & documents',
+    image: '/assets/icon-business-hd.jpg',
+    applyLabel: 'Apply for Business Loan',
+    guidance: 'Looking to expand? Our Puducherry advisors are ready to assist with customized business funding.',
+    benefits: [
+      'Loan amounts up to ₹1 Crore for eligible businesses',
+      'Collateral-free CGTMSE options available',
+      'Flexible EMI structures matching business cash flows',
+      'Special schemes for MSMEs and Women Entrepreneurs'
+    ],
+    eligibility: [
+      'Proprietorships, Partnerships & Pvt Ltd Companies',
+      'Minimum 2 years of operational business vintage',
+      'Annual business turnover of ₹20 Lakhs+',
+      'Clean financial track record & banking history'
+    ],
+    documents: [
+      'Basic KYC (Applicant & Co-applicant): Aadhaar, PAN',
+      'Bank account statement (6 months or 1 year) - Current / Savings / OD',
+      'Last 2 years IT papers',
+      'GST certificate',
+      'MSME certificate',
+      'Selfie photo',
+      'Own house proof'
+    ]
+  },
+  'mortgage-loan': {
+    id: 'mortgage-loan',
+    title: 'Mortgage Loan',
+    badge: 'Funding Up to 75% LTV',
+    subtitle: 'Secured property financing • Complete details, criteria & documents',
+    image: '/assets/icon-mortgage-hd.jpg',
+    applyLabel: 'Apply for Mortgage Loan',
+    guidance: 'Unlock property equity. Our Puducherry advisors are ready to assist with high-value mortgage financing.',
+    benefits: [
+      'High LTV funding up to 75% of market valuation',
+      'Much lower interest rates compared to personal loans',
+      'Extended repayment tenure up to 15 years',
+      'Retain ownership while utilizing the property equity'
+    ],
+    eligibility: [
+      'Individuals, business owners & property title holders',
+      'Clear, marketable & unencumbered property title',
+      'Adequate repayment capacity based on income',
+      'Property located in Puducherry or Tamilnadu'
+    ],
+    documents: [
+      'Basic KYC (Applicant & Co-applicant): Aadhaar, PAN',
+      'If both are salaried: Last 3 months payslips, last 6 months bank account statement',
+      'If one is salaried & one is business (Salaried): Last 3 months payslips, last 6 months bank account statement',
+      'If one is salaried & one is business (Business): Last 2 years IT papers, GST certificate, MSME certificate, last 1 year bank account statement (current/savings/OD)',
+      'Property documents: Full set including mother document / parent document, Patta, EC, house tax, EB bill, water tax',
+      'Photos: 3 passport size photos each for applicant and co-applicant',
+      'Note: Additional income (rental, home business, other business, agricultural, etc.) can also be submitted and considered as per lender policy.'
+    ]
+  }
+};
+
 export default function SolutionsSection() {
   const [showAllLoans, setShowAllLoans] = useState(false);
   const [showAllInsurance, setShowAllInsurance] = useState(false);
+  const [activeLoanModalId, setActiveLoanModalId] = useState(null);
 
   const displayedLoans = showAllLoans ? loanProducts : loanProducts.slice(0, 4);
   const displayedInsurance = showAllInsurance ? insuranceProducts : insuranceProducts.slice(0, 4);
+
+  const currentModalData = activeLoanModalId ? loanModalDetails[activeLoanModalId] : null;
+
+  // Close modal on Escape key and manage body overflow lock
+  useEffect(() => {
+    function handleKeyDown(e) {
+      if (e.key === 'Escape') {
+        setActiveLoanModalId(null);
+      }
+    }
+    if (activeLoanModalId) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [activeLoanModalId]);
+
+  const handleCardClick = (item) => {
+    if (loanModalDetails[item.id]) {
+      setActiveLoanModalId(item.id);
+    } else {
+      // Smoothly navigate to free consultation and pre-select service
+      window.dispatchEvent(new CustomEvent('select-service', { detail: item.id }));
+      const consultationEl = document.getElementById('free-consultation');
+      if (consultationEl) {
+        consultationEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleApplyClick = (serviceId) => {
+    setActiveLoanModalId(null);
+    window.dispatchEvent(new CustomEvent('select-service', { detail: serviceId }));
+    const consultationEl = document.getElementById('free-consultation');
+    if (consultationEl) {
+      consultationEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="w-full px-2.5 xs:px-3.5 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-6 sm:py-8 md:py-10">
@@ -145,34 +320,50 @@ export default function SolutionsSection() {
 
               {/* 4 Cards in a Row Grid (Expandable) */}
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2.5 sm:gap-3 md:gap-3.5">
-                {displayedLoans.map((item) => (
-                  <div
-                    key={item.id}
-                    className="group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px] animate-in fade-in-50 duration-200"
-                  >
-                    <div className="w-full flex items-center justify-center h-14 xs:h-16 sm:h-18 mb-1.5">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-2xs"
-                        loading="lazy"
-                      />
-                    </div>
+                {displayedLoans.map((item) => {
+                  const hasModal = Boolean(loanModalDetails[item.id]);
+                  return (
+                    <div
+                      key={item.id}
+                      onClick={() => handleCardClick(item)}
+                      className={`group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px] animate-in fade-in-50 duration-200 relative ${
+                        hasModal 
+                          ? 'border-[#edebe7] hover:border-[#004737] hover:shadow-lg hover:-translate-y-0.5 ring-offset-1 hover:ring-2 hover:ring-[#004737]/15' 
+                          : 'border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md'
+                      }`}
+                      title={hasModal ? `Click to view ${item.title} details & documents` : `Learn more about ${item.title}`}
+                    >
+                      {/* Badge indicator on cards with details modal */}
+                      {hasModal && (
+                        <div className="absolute top-2 right-2 text-[9px] font-bold text-[#004737] bg-[#e8f5ec] px-1.5 py-0.5 rounded-full border border-[#d2edd8] shadow-2xs opacity-90 group-hover:opacity-100 transition-opacity">
+                          Details
+                        </div>
+                      )}
 
-                    <div className="flex flex-col items-center my-auto px-0.5 w-full">
-                      <h4 className="text-[11.5px] xs:text-xs sm:text-[13px] font-bold text-[#004737] group-hover:text-[#c98218] transition-colors leading-tight">
-                        {item.title}
-                      </h4>
-                      <p className="text-[9.5px] xs:text-[10.5px] text-gray-500 leading-tight mt-1 max-w-[130px]">
-                        {item.subtitle}
-                      </p>
-                    </div>
+                      <div className="w-full flex items-center justify-center h-14 xs:h-16 sm:h-18 mb-1.5">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-2xs"
+                          loading="lazy"
+                        />
+                      </div>
 
-                    <div className="mt-2.5 w-5 h-5 rounded-full border border-[#f3cca0] bg-[#fffaf3] text-[#d97706] group-hover:bg-[#d97706] group-hover:text-white transition-all flex items-center justify-center flex-shrink-0">
-                      <ArrowRight className="w-2.5 h-2.5" />
+                      <div className="flex flex-col items-center my-auto px-0.5 w-full">
+                        <h4 className="text-[11.5px] xs:text-xs sm:text-[13px] font-bold text-[#004737] group-hover:text-[#c98218] transition-colors leading-tight">
+                          {item.title}
+                        </h4>
+                        <p className="text-[9.5px] xs:text-[10.5px] text-gray-500 leading-tight mt-1 max-w-[130px]">
+                          {item.subtitle}
+                        </p>
+                      </div>
+
+                      <div className="mt-2.5 w-5 h-5 rounded-full border border-[#f3cca0] bg-[#fffaf3] text-[#d97706] group-hover:bg-[#004737] group-hover:border-[#004737] group-hover:text-white transition-all flex items-center justify-center flex-shrink-0">
+                        <ArrowRight className="w-2.5 h-2.5" />
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -220,6 +411,7 @@ export default function SolutionsSection() {
                 {displayedInsurance.map((item) => (
                   <div
                     key={item.id}
+                    onClick={() => handleCardClick(item)}
                     className="group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px] animate-in fade-in-50 duration-200"
                   >
                     <div className="w-full flex items-center justify-center h-14 xs:h-16 sm:h-18 mb-1.5">
@@ -252,6 +444,160 @@ export default function SolutionsSection() {
         </div>
 
       </div>
+
+      {/* ================= LOAN DETAILS MODAL WITH EXACT 3-CARD LAYOUT ================= */}
+      {currentModalData && (
+        <div 
+          className="fixed inset-0 z-[999] flex items-center justify-center p-3 xs:p-4 sm:p-6 bg-black/60 backdrop-blur-md animate-modal-backdrop"
+          onClick={() => setActiveLoanModalId(null)}
+        >
+          {/* Modal Container */}
+          <div 
+            className="w-full max-w-5xl xl:max-w-6xl bg-white rounded-2xl sm:rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,71,55,0.4)] border border-[#ede7dc] overflow-hidden flex flex-col max-h-[94vh] animate-modal-content relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* 1. MODAL HEADER */}
+            <div className="bg-gradient-to-r from-[#003d2f] via-[#004737] to-[#015240] text-white p-3.5 sm:p-4 md:p-5 relative flex items-center justify-between border-b border-white/10 shadow-xs flex-shrink-0">
+              <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-1 flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <img 
+                    src={currentModalData.image} 
+                    alt={currentModalData.title} 
+                    className="max-h-full max-w-full object-contain drop-shadow-xs"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold tracking-tight text-white leading-tight">
+                      {currentModalData.title}
+                    </h3>
+                    <span className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-wider bg-[#d97706] text-white px-2 py-0.5 rounded-full shadow-2xs">
+                      {currentModalData.badge}
+                    </span>
+                  </div>
+                  <p className="text-[11px] sm:text-xs md:text-[13px] text-emerald-100/85 leading-tight mt-0.5 truncate">
+                    {currentModalData.subtitle}
+                  </p>
+                </div>
+              </div>
+
+              {/* Close Button */}
+              <button
+                type="button"
+                onClick={() => setActiveLoanModalId(null)}
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all cursor-pointer flex-shrink-0 active:scale-95 ml-2"
+                title="Close (Esc)"
+              >
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
+              </button>
+            </div>
+
+            {/* 2. MODAL BODY (3-Card Layout matching user reference) */}
+            <div className="p-3.5 sm:p-5 md:p-6 overflow-y-auto [scrollbar-width:thin] [scrollbar-color:#c2d6ce_transparent] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-[#004737]/30 [&::-webkit-scrollbar-thumb]:rounded-full flex-1">
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 md:gap-4.5 xl:gap-5 items-stretch">
+                
+                {/* ================= CARD 1: KEY BENEFITS & FEATURES (Pastel Rose / Maroon) ================= */}
+                <div className="bg-[#fff9fa] border border-[#ffe8eb] rounded-2xl md:rounded-[22px] p-4 sm:p-5 shadow-xs flex flex-col justify-start">
+                  {/* Card Header */}
+                  <div className="flex items-center gap-2 pb-3 border-b border-[#ffe2e6]">
+                    <Sparkles className="w-4 h-4 text-[#d97706] flex-shrink-0" />
+                    <h4 className="text-xs sm:text-[13px] font-bold text-[#8b1820] tracking-wider uppercase">
+                      KEY BENEFITS & FEATURES
+                    </h4>
+                  </div>
+
+                  {/* Items List */}
+                  <div className="mt-3.5 space-y-3">
+                    {currentModalData.benefits.map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#8b1820] flex-shrink-0 mt-0.5" strokeWidth={2.2} />
+                        <span className="text-xs sm:text-[12.5px] text-gray-800 leading-snug font-medium">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* ================= CARD 2: ELIGIBILITY CRITERIA (Ice Slate / Navy) ================= */}
+                <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-2xl md:rounded-[22px] p-4 sm:p-5 shadow-xs flex flex-col justify-start">
+                  {/* Card Header */}
+                  <div className="flex items-center gap-2 pb-3 border-b border-[#e2e8f0]">
+                    <User className="w-4 h-4 text-[#0f2d59] flex-shrink-0" />
+                    <h4 className="text-xs sm:text-[13px] font-bold text-[#0f2d59] tracking-wider uppercase">
+                      ELIGIBILITY CRITERIA
+                    </h4>
+                  </div>
+
+                  {/* Items List */}
+                  <div className="mt-3.5 space-y-3">
+                    {currentModalData.eligibility.map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0f2d59] flex-shrink-0 mt-1.5" />
+                        <span className="text-xs sm:text-[12.5px] text-gray-800 leading-snug font-medium">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* ================= CARD 3: DOCUMENTS REQUIRED (Warm Cream / Amber) ================= */}
+                <div className="bg-[#fffcf3] border border-[#fef08a]/80 rounded-2xl md:rounded-[22px] p-4 sm:p-5 shadow-xs flex flex-col justify-start">
+                  {/* Card Header */}
+                  <div className="flex items-center gap-2 pb-3 border-b border-[#fef08a]/60">
+                    <FileText className="w-4 h-4 text-[#a16207] flex-shrink-0" />
+                    <h4 className="text-xs sm:text-[13px] font-bold text-[#a16207] tracking-wider uppercase">
+                      DOCUMENTS REQUIRED
+                    </h4>
+                  </div>
+
+                  {/* Items List */}
+                  <div className={`mt-3.5 ${currentModalData.documents.some(d => d.length > 75) ? 'space-y-2.5' : 'space-y-3'}`}>
+                    {currentModalData.documents.map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#a16207] flex-shrink-0 mt-0.5" strokeWidth={2.2} />
+                        <span className={`${currentModalData.documents.some(d => d.length > 75) ? 'text-[11px] sm:text-[11.5px]' : 'text-xs sm:text-[12.5px]'} text-gray-800 leading-snug font-medium`}>
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* 3. MODAL FOOTER */}
+            <div className="bg-[#fcfbf7] border-t border-[#ede7dc] px-4 sm:px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2.5 flex-shrink-0">
+              <div className="text-[11px] sm:text-xs text-gray-500 text-center sm:text-left">
+                {currentModalData.guidance}
+              </div>
+              <div className="flex items-center gap-2.5 w-full sm:w-auto">
+                <button
+                  type="button"
+                  onClick={() => setActiveLoanModalId(null)}
+                  className="w-1/2 sm:w-auto px-4 py-2 text-xs font-bold text-gray-700 hover:text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 rounded-xl transition-all cursor-pointer"
+                >
+                  Close
+                </button>
+                <a
+                  href="#free-consultation"
+                  onClick={() => handleApplyClick(currentModalData.id)}
+                  className="w-1/2 sm:w-auto inline-flex items-center justify-center gap-1.5 bg-[#004737] hover:bg-[#00362a] active:scale-95 text-white text-xs sm:text-[12.5px] font-bold px-4 sm:px-5 py-2 rounded-xl shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap"
+                >
+                  <span>{currentModalData.applyLabel}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
+
     </section>
   );
 }

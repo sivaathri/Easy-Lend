@@ -64,6 +64,23 @@ export default function FreeConsultation() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Listen for service selection from external cards/modals
+  useEffect(() => {
+    function handleExternalSelect(e) {
+      const srvId = e.detail;
+      if (!srvId) return;
+      for (const group of serviceGroups) {
+        const found = group.items.find(item => item.id === srvId);
+        if (found) {
+          setFormData(prev => ({ ...prev, service: found }));
+          break;
+        }
+      }
+    }
+    window.addEventListener('select-service', handleExternalSelect);
+    return () => window.removeEventListener('select-service', handleExternalSelect);
+  }, []);
+
   const handleSelectService = (srv) => {
     setFormData(prev => ({ ...prev, service: srv }));
     setIsDropdownOpen(false);
