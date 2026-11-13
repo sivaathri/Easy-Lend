@@ -12,7 +12,7 @@ export default function Hero() {
         <img
           src="/assets/Eazy Lend Financial Guidance Banner Original.png"
           alt="Eazy Lend - Financial Guidance"
-          className="w-full h-auto max-h-[460px] md:max-h-[500px] lg:max-h-[540px] xl:max-h-[580px] object-cover object-center block select-none"
+          className="w-full h-auto max-h-[460px] md:max-h-[500px] lg:max-h-[540px] xl:max-h-[610px] object-cover object-center block select-none"
           loading="eager"
         />
 

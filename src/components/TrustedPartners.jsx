@@ -31,7 +31,7 @@ const bankingPartners = [
     id: 'indian-bank',
     name: 'Indian Bank',
     category: 'Public Sector Bank',
-    logoSrc: '/assets/partners/indian-bank-clean.png'
+    logoSrc: '/assets/partners/indian-bank.svg'
   },
   {
     id: 'kotak-bank',
