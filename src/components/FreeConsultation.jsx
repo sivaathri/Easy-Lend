@@ -87,17 +87,17 @@ export default function FreeConsultation() {
   };
 
   return (
-    <section id="free-consultation" className="w-full px-2.5 xs:px-3.5 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-5 sm:py-7 md:py-9 scroll-mt-20 sm:scroll-mt-24">
+    <section id="free-consultation" className="w-full px-2.5 xs:px-3.5 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-5 sm:py-7 md:py-9 pb-20 sm:pb-28 scroll-mt-20 sm:scroll-mt-24 relative z-20">
       {/* Anchor alias for #contact */}
       <div id="contact" className="sr-only" />
       
       <div className="w-full max-w-[1720px] mx-auto">
         
         {/* ================= MAIN WIDE HORIZONTAL BANNER (Exact Reference Match) ================= */}
-        <div className="w-full bg-[#fcfbf9] border border-[#ede7dc] rounded-2xl md:rounded-[28px] overflow-hidden relative shadow-[0_2px_14px_rgba(0,0,0,0.03)]">
+        <div className="w-full bg-[#fcfbf9] border border-[#ede7dc] rounded-2xl md:rounded-[28px] relative shadow-[0_2px_14px_rgba(0,0,0,0.03)]">
           
           {/* Top-Right Decorative Mint Arc Accent */}
-          <div className="absolute top-0 right-0 w-48 sm:w-64 md:w-80 h-20 sm:h-24 pointer-events-none select-none z-0 overflow-hidden opacity-50">
+          <div className="absolute top-0 right-0 w-48 sm:w-64 md:w-80 h-20 sm:h-24 pointer-events-none select-none z-0 overflow-hidden rounded-tr-2xl md:rounded-tr-[28px] opacity-50">
             <svg className="w-full h-full" viewBox="0 0 240 80" preserveAspectRatio="none" fill="none">
               <path d="M0,0 C80,35 160,20 240,65 L240,0 Z" fill="#d8ede2" opacity="0.6" />
               <path d="M60,0 C120,25 180,15 240,45 L240,0 Z" fill="#c3e5d1" opacity="0.4" />
@@ -108,9 +108,9 @@ export default function FreeConsultation() {
           <div className="relative z-10 flex flex-col lg:flex-row items-stretch justify-between">
             
             {/* ================= 1. FAR LEFT: Advisor Photo ================= */}
-            <div className="w-full lg:w-[17%] xl:w-[16%] 2xl:w-[15%] flex-shrink-0 relative bg-[#f3efe6]/40 min-h-[180px] sm:min-h-[200px] lg:min-h-full overflow-hidden flex items-end">
+            <div className="w-full lg:w-[17%] xl:w-[16%] 2xl:w-[15%] flex-shrink-0 relative bg-[#f3efe6]/40 min-h-[180px] sm:min-h-[200px] lg:min-h-full rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl md:rounded-l-[28px] overflow-hidden flex items-end">
               <img 
-                src="/assets/consultation-advisor-hd.jpg" 
+                src="/assets/consultation-advisor-hd.png" 
                 alt="Ashok - Managing Director & Financial Advisor" 
                 className="w-full h-full object-cover object-top select-none pointer-events-none"
                 loading="lazy"
@@ -234,8 +234,8 @@ export default function FreeConsultation() {
             </div>
 
             {/* ================= 4. FAR RIGHT: "Get in Touch" Card ================= */}
-            <div className="w-full lg:w-[30%] xl:w-[31%] 2xl:w-[32%] p-2.5 sm:p-3 lg:p-3.5 xl:p-4 flex flex-col justify-center">
-              <div className="w-full bg-[#edf6f0] border border-[#d6ecde] rounded-xl sm:rounded-2xl p-4 sm:p-4.5 shadow-2xs">
+            <div className="w-full lg:w-[30%] xl:w-[31%] 2xl:w-[32%] p-2.5 sm:p-3 lg:p-3.5 xl:p-4 flex flex-col justify-center relative z-20">
+              <div className="w-full bg-[#edf6f0] border border-[#d6ecde] rounded-xl sm:rounded-2xl p-4 sm:p-4.5 shadow-2xs relative">
                 
                 {/* Form Header */}
                 <div className="mb-2.5">
@@ -283,7 +283,7 @@ export default function FreeConsultation() {
                     </div>
 
                     {/* Row 2: Select Service dropdown */}
-                    <div className="relative" ref={dropdownRef}>
+                    <div className="relative z-30" ref={dropdownRef}>
                       <button
                         type="button"
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -319,7 +319,7 @@ export default function FreeConsultation() {
 
                       {/* Dropdown Menu Options */}
                       {isDropdownOpen && (
-                        <div className="absolute top-full left-0 right-0 mt-1.5 bg-white rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.15)] border border-gray-200 py-2 z-50 max-h-60 overflow-y-auto animate-in fade-in-50 duration-150">
+                        <div className="absolute top-full left-0 right-0 mt-1.5 bg-white rounded-xl shadow-[0_16px_40px_rgba(0,0,0,0.22)] border border-gray-200/90 py-2 z-50 max-h-64 overflow-y-auto animate-in fade-in-50 duration-150 [scrollbar-width:thin] [scrollbar-color:#004737/30_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-[#004737]/30 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent">
                           {serviceGroups.map((group, gIdx) => (
                             <div key={group.category} className={gIdx > 0 ? 'mt-2 pt-2 border-t border-gray-100' : ''}>
                               {/* Category Header */}
