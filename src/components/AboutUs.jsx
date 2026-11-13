@@ -68,8 +68,8 @@ export default function AboutUs() {
 
               {/* Subtext */}
               <p className="text-[11.5px] sm:text-xs md:text-[12.5px] text-gray-700 leading-snug font-normal max-w-xl">
-                <strong className="text-[#004737] font-bold">Eazy Lend</strong> is a customer-first financial services platform, 
-                helping individuals and businesses access the right loan and insurance solutions with ease, transparency, and expert support.
+                <strong className="text-[#004737] font-bold">Eazy Lend</strong> is a customer- financial services platform, 
+               facilitate  individuals and businesses access the right loan and insurance solutions with ease, transparency, and expert support.
               </p>
             </div>
 
@@ -89,7 +89,7 @@ export default function AboutUs() {
                     Our Mission
                   </h3>
                   <p className="text-[10px] sm:text-[11px] text-gray-600 leading-tight">
-                    To make loans and insurance simple, accessible, and transparent for everyone.
+                    To make loans and insurance simple, accessible, and transparent for Our Clients.
                   </p>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function AboutUs() {
                     Our Vision
                   </h3>
                   <p className="text-[10px] sm:text-[11px] text-gray-600 leading-tight">
-                    To be a trusted financial partner for every individual and business across India.
+                    To be a trusted financial partner for every individual and business across our region .
                   </p>
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function AboutUs() {
                     <span className="text-gray-300">|</span>
                     <span>Transparency</span>
                     <span className="text-gray-300">|</span>
-                    <span>Customer Focus</span>
+                    <span>our values</span>
                     <span className="text-gray-300">|</span>
                     <span>Long-term Support</span>
                   </p>
