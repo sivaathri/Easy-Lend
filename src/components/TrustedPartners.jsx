@@ -228,7 +228,7 @@ const partnerSections = [
     tabLabel: 'Banking Partners',
     headingTitle: 'Our Banking',
     headingHighlight: 'Partners',
-    badgeText: 'IRDAI & Banking Network Authorized',
+    badgeText: 'RBI & Banking Network Authorized',
     subtitleText: "Direct Lending Tie-ups with India's Premier Scheduled Commercial & Retail Banks",
     partners: bankingPartners
   },

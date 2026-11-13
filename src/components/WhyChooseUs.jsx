@@ -24,7 +24,7 @@ const features = [
   },
   {
     id: 'solutions',
-    title: 'Trusted Solutions',
+    title: 'All in One',
     descLine1: 'Wide range of loan and',
     descLine2: 'insurance options under one roof.',
     icon: (
