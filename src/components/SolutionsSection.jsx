@@ -207,6 +207,36 @@ const loanModalDetails = {
       'Photos: 3 passport size photos each for applicant and co-applicant',
       'Note: Additional income (rental, home business, other business, agricultural, etc.) can also be submitted and considered as per lender policy.'
     ]
+  },
+  'working-capital': {
+    id: 'working-capital',
+    title: 'Working Capital',
+    badge: 'OD / CC / UCL Facilities',
+    subtitle: 'Fuel your daily business operations • Complete details, criteria & documents',
+    image: '/assets/icon-capital-hd.jpg',
+    applyLabel: 'Apply for Working Capital',
+    guidance: 'Optimize business cash flow. Our Puducherry advisors are ready to assist with customized credit limits.',
+    benefits: [
+      'Flexible Overdraft (OD) & Cash Credit (CC) limits',
+      'Pay interest only on the utilized amount, not sanctioned limit',
+      'Smooth vendor payments, inventory purchase & payroll funding',
+      'Easy annual renewal with credit enhancement options'
+    ],
+    eligibility: [
+      'Manufacturers, traders, retailers, wholesalers & service providers',
+      'Minimum 2 to 3 years of operational business vintage',
+      'Healthy annual turnover with active current account history',
+      'Satisfactory credit score (CIBIL 700+ preferred)'
+    ],
+    documents: [
+      'Basic KYC (Applicant, Co-applicant, Partners or Directors): Aadhaar, PAN',
+      'Bank account statement (last 12 months) - All Current, Savings & CC/OD accounts',
+      'Last 2 to 3 years audited financials (Balance Sheet, P&L, ITR with computation)',
+      'GST returns (last 12 months) & GST registration certificate',
+      'Business registration: Partnership Deed / MOA & AOA / MSME Udyam Certificate',
+      'Sanction letters of existing loan/OD/CC facilities (if applicable)',
+      'Property collateral documents or stock statements (as per lender requirement)'
+    ]
   }
 };
 
@@ -326,16 +356,12 @@ export default function SolutionsSection() {
                     <div
                       key={item.id}
                       onClick={() => handleCardClick(item)}
-                      className={`group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px] animate-in fade-in-50 duration-200 relative ${
-                        hasModal 
-                          ? 'border-[#edebe7] hover:border-[#004737] hover:shadow-lg hover:-translate-y-0.5 ring-offset-1 hover:ring-2 hover:ring-[#004737]/15' 
-                          : 'border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md'
-                      }`}
+                      className="group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px] animate-in fade-in-50 duration-200 relative"
                       title={hasModal ? `Click to view ${item.title} details & documents` : `Learn more about ${item.title}`}
                     >
                       {/* Badge indicator on cards with details modal */}
                       {hasModal && (
-                        <div className="absolute top-2 right-2 text-[9px] font-bold text-[#004737] bg-[#e8f5ec] px-1.5 py-0.5 rounded-full border border-[#d2edd8] shadow-2xs opacity-90 group-hover:opacity-100 transition-opacity">
+                        <div className="absolute top-2 right-2 text-[9px] font-bold text-[#b45309] bg-[#fefce8] px-1.5 py-0.5 rounded-full border border-[#fef08a] shadow-2xs opacity-90 group-hover:opacity-100 transition-opacity">
                           Details
                         </div>
                       )}
@@ -358,7 +384,7 @@ export default function SolutionsSection() {
                         </p>
                       </div>
 
-                      <div className="mt-2.5 w-5 h-5 rounded-full border border-[#f3cca0] bg-[#fffaf3] text-[#d97706] group-hover:bg-[#004737] group-hover:border-[#004737] group-hover:text-white transition-all flex items-center justify-center flex-shrink-0">
+                      <div className="mt-2.5 w-5 h-5 rounded-full border border-[#f3cca0] bg-[#fffaf3] text-[#d97706] group-hover:bg-[#d97706] group-hover:border-[#d97706] group-hover:text-white transition-all flex items-center justify-center flex-shrink-0">
                         <ArrowRight className="w-2.5 h-2.5" />
                       </div>
                     </div>
