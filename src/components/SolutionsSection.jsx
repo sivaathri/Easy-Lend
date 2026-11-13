@@ -87,7 +87,7 @@ const insuranceProducts = [
   },
 ];
 
-const loanModalDetails = {
+const serviceModalDetails = {
   'home-loan': {
     id: 'home-loan',
     title: 'Home Loan',
@@ -237,27 +237,500 @@ const loanModalDetails = {
       'Sanction letters of existing loan/OD/CC facilities (if applicable)',
       'Property collateral documents or stock statements (as per lender requirement)'
     ]
+  },
+  'health-insurance': {
+    id: 'health-insurance',
+    title: 'Health Insurance',
+    badge: 'Cashless Hospitalization Across India',
+    subtitle: 'Comprehensive medical protection • Complete plans, benefits & documents',
+    image: '/assets/icon-health-hd.jpg',
+    applyLabel: 'Get Health Insurance Quote',
+    guidance: 'Protect your family against rising medical costs. Our Puducherry advisors are ready to assist.',
+    card1: {
+      icon: Sparkles,
+      iconColor: 'text-[#d97706]',
+      title: 'POPULAR POLICY OPTIONS',
+      titleColor: 'text-[#8b1820]',
+      borderColor: 'border-[#ffe2e6]',
+      bg: 'bg-[#fff9fa]',
+      border: 'border-[#ffe8eb]',
+      bulletType: 'dot',
+      dotColor: 'bg-[#8b1820]',
+      items: [
+        { title: 'Individual Health Cover', desc: 'Dedicated sum insured for single person medical protection.' },
+        { title: 'Family Floater Health Plan', desc: 'Single umbrella policy covering spouse, children, and parents.' },
+        { title: 'Senior Citizen Health Plan', desc: 'Tailored medical coverage for parents including pre-existing diseases.' },
+        { title: 'Critical Illness Protection', desc: 'Lump sum payout upon diagnosis of major critical illnesses.' }
+      ]
+    },
+    card2: {
+      icon: CheckCircle2,
+      iconColor: 'text-[#8b1820]',
+      title: 'KEY BENEFITS & COVERAGE',
+      titleColor: 'text-[#0f2d59]',
+      borderColor: 'border-[#e2e8f0]',
+      bg: 'bg-[#f8fafc]',
+      border: 'border-[#e2e8f0]',
+      bulletType: 'check',
+      checkColor: 'text-[#8b1820]',
+      items: [
+        'Extensive cashless hospital network across India',
+        'Pre- and post-hospitalization expenses, as specified in the policy',
+        'Tax deduction under Section 80D, as per applicable tax rules',
+        'Cumulative No Claim Bonus (NCB) booster, subject to policy terms'
+      ]
+    },
+    card3: {
+      icon: FileText,
+      iconColor: 'text-[#a16207]',
+      title: 'DOCUMENTS REQUIRED',
+      titleColor: 'text-[#a16207]',
+      borderColor: 'border-[#fef08a]/60',
+      bg: 'bg-[#fffcf3]',
+      border: 'border-[#fef08a]/80',
+      bulletType: 'check',
+      checkColor: 'text-[#a16207]',
+      items: [
+        'Aadhaar Card & PAN Card of proposer',
+        'Age proof & medical history details of insured members',
+        'Past medical records / prescriptions (if any pre-existing disease)',
+        'Passport size photograph'
+      ]
+    }
+  },
+  'life-insurance': {
+    id: 'life-insurance',
+    title: 'Life Insurance',
+    badge: 'High Sum Assured Protection',
+    subtitle: "Secure your family's financial future • Complete plans, benefits & documents",
+    image: '/assets/icon-life-hd.jpg',
+    applyLabel: 'Get Life Insurance Quote',
+    guidance: "Safeguard your loved ones' dreams. Our Puducherry advisors are ready to help you choose the ideal plan.",
+    card1: {
+      icon: Sparkles,
+      iconColor: 'text-[#d97706]',
+      title: 'POPULAR POLICY OPTIONS',
+      titleColor: 'text-[#8b1820]',
+      borderColor: 'border-[#ffe2e6]',
+      bg: 'bg-[#fff9fa]',
+      border: 'border-[#ffe8eb]',
+      bulletType: 'dot',
+      dotColor: 'bg-[#8b1820]',
+      items: [
+        { title: 'Term Life Insurance', desc: 'High financial cover at competitive premiums for peace of mind.' },
+        { title: 'Guaranteed Savings Plans', desc: 'Family protection combined with assured benefits, subject to policy terms.' },
+        { title: 'Child Education Plans', desc: "Ensure your child's dream education funding even in your absence." },
+        { title: 'Retirement & Pension Plans', desc: 'Planned monthly income to enjoy your golden post-retirement years.' }
+      ]
+    },
+    card2: {
+      icon: CheckCircle2,
+      iconColor: 'text-[#8b1820]',
+      title: 'KEY BENEFITS & COVERAGE',
+      titleColor: 'text-[#0f2d59]',
+      borderColor: 'border-[#e2e8f0]',
+      bg: 'bg-[#f8fafc]',
+      border: 'border-[#e2e8f0]',
+      bulletType: 'check',
+      checkColor: 'text-[#8b1820]',
+      items: [
+        'High sum assured options at competitive premiums',
+        'Tax benefits and guaranteed/assured benefits, subject to policy terms and applicable tax laws',
+        'Critical illness & accidental death benefit riders',
+        'Dedicated claim assistance throughout the claim process'
+      ]
+    },
+    card3: {
+      icon: FileText,
+      iconColor: 'text-[#a16207]',
+      title: 'DOCUMENTS REQUIRED',
+      titleColor: 'text-[#a16207]',
+      borderColor: 'border-[#fef08a]/60',
+      bg: 'bg-[#fffcf3]',
+      border: 'border-[#fef08a]/80',
+      bulletType: 'check',
+      checkColor: 'text-[#a16207]',
+      items: [
+        'Aadhaar Card & PAN Card',
+        'Last 3 months payslips or 2 years ITR (Income proof)',
+        'Last 6 months bank account statement',
+        'Recent passport size photograph'
+      ]
+    }
+  },
+  'term-insurance': {
+    id: 'term-insurance',
+    title: 'Term Insurance',
+    badge: 'Pure High-Cover Life Protection',
+    subtitle: 'Maximum financial security for family at nominal premiums • Complete plans, benefits & documents',
+    image: '/assets/icon-term-hd.jpg',
+    applyLabel: 'Get Term Insurance Quote',
+    guidance: 'Ensure your family is financially secure. Our Puducherry advisors are ready to help you find the highest cover at lowest rates.',
+    card1: {
+      icon: Sparkles,
+      iconColor: 'text-[#d97706]',
+      title: 'POPULAR POLICY OPTIONS',
+      titleColor: 'text-[#8b1820]',
+      borderColor: 'border-[#ffe2e6]',
+      bg: 'bg-[#fff9fa]',
+      border: 'border-[#ffe8eb]',
+      bulletType: 'dot',
+      dotColor: 'bg-[#8b1820]',
+      items: [
+        { title: 'Pure Level Term Plan', desc: 'Constant high sum assured payout throughout policy tenure.' },
+        { title: 'Return of Premium (TROP)', desc: '100% of all paid premiums refunded upon surviving policy term.' },
+        { title: 'Increasing Sum Assured', desc: 'Cover automatically increases annually to counteract inflation.' },
+        { title: 'Income Replacement Option', desc: 'Monthly staggered payouts to support family household expenses.' }
+      ]
+    },
+    card2: {
+      icon: CheckCircle2,
+      iconColor: 'text-[#8b1820]',
+      title: 'KEY BENEFITS & COVERAGE',
+      titleColor: 'text-[#0f2d59]',
+      borderColor: 'border-[#e2e8f0]',
+      bg: 'bg-[#f8fafc]',
+      border: 'border-[#e2e8f0]',
+      bulletType: 'check',
+      checkColor: 'text-[#8b1820]',
+      items: [
+        'Up to ₹1 Crore+ life cover starting at affordable monthly premiums',
+        'Add-on riders: Critical Illness, Accidental Total Disability & Terminal Illness',
+        'Tax deductions under Section 80C & tax-free claim payouts under 10(10D)',
+        'Quick policy issuance with paperless KYC and prompt claim settlement'
+      ]
+    },
+    card3: {
+      icon: FileText,
+      iconColor: 'text-[#a16207]',
+      title: 'DOCUMENTS REQUIRED',
+      titleColor: 'text-[#a16207]',
+      borderColor: 'border-[#fef08a]/60',
+      bg: 'bg-[#fffcf3]',
+      border: 'border-[#fef08a]/80',
+      bulletType: 'check',
+      checkColor: 'text-[#a16207]',
+      items: [
+        'Aadhaar Card & PAN Card of applicant',
+        'Last 3 months salary slips or last 2 years ITR with computation',
+        'Last 6 months bank account statements',
+        'Recent passport size photograph'
+      ]
+    }
+  },
+  'vehicle-insurance': {
+    id: 'vehicle-insurance',
+    title: 'Vehicle Insurance',
+    badge: 'Instant Policy Issuance & Cashless Claims',
+    subtitle: 'Comprehensive coverage for 2-wheelers, 4-wheelers & commercial fleets • Complete plans, benefits & documents',
+    image: '/assets/icon-vehicle-hd.jpg',
+    applyLabel: 'Get Vehicle Insurance Quote',
+    guidance: 'Drive with complete peace of mind. Our Puducherry advisors are ready to assist with instant policy generation.',
+    card1: {
+      icon: Sparkles,
+      iconColor: 'text-[#d97706]',
+      title: 'POPULAR POLICY OPTIONS',
+      titleColor: 'text-[#8b1820]',
+      borderColor: 'border-[#ffe2e6]',
+      bg: 'bg-[#fff9fa]',
+      border: 'border-[#ffe8eb]',
+      bulletType: 'dot',
+      dotColor: 'bg-[#8b1820]',
+      items: [
+        { title: 'Comprehensive Motor Plan', desc: 'Complete protection against accidents, theft, fire & third-party liabilities.' },
+        { title: 'Zero Depreciation (Bumper to Bumper)', desc: 'Full claim payout without any deduction for depreciation of vehicle parts.' },
+        { title: 'Third-Party Liability Only', desc: 'Mandatory legal protection covering property damage & bodily injury to others.' },
+        { title: 'Commercial Vehicle & Fleet Cover', desc: 'Tailored protection for taxis, trucks, delivery vans and commercial autos.' }
+      ]
+    },
+    card2: {
+      icon: CheckCircle2,
+      iconColor: 'text-[#8b1820]',
+      title: 'KEY BENEFITS & COVERAGE',
+      titleColor: 'text-[#0f2d59]',
+      borderColor: 'border-[#e2e8f0]',
+      bg: 'bg-[#f8fafc]',
+      border: 'border-[#e2e8f0]',
+      bulletType: 'check',
+      checkColor: 'text-[#8b1820]',
+      items: [
+        'Network of 5,000+ cashless network garages across India and Puducherry',
+        'Essential add-ons: Engine Protector, Roadside Assistance, Tyre & Consumables cover',
+        'Seamless No Claim Bonus (NCB) transfer up to 50% from prior insurer',
+        'Instant digital policy renewal with zero inspection for unexpired policies'
+      ]
+    },
+    card3: {
+      icon: FileText,
+      iconColor: 'text-[#a16207]',
+      title: 'DOCUMENTS REQUIRED',
+      titleColor: 'text-[#a16207]',
+      borderColor: 'border-[#fef08a]/60',
+      bg: 'bg-[#fffcf3]',
+      border: 'border-[#fef08a]/80',
+      bulletType: 'check',
+      checkColor: 'text-[#a16207]',
+      items: [
+        'Vehicle Registration Certificate (RC Book / Smart Card)',
+        'Previous year insurance policy copy (for renewals & NCB verification)',
+        'Aadhaar Card & PAN Card of vehicle owner',
+        'Driving license copy of owner/driver'
+      ]
+    }
+  },
+  'stock-insurance': {
+    id: 'stock-insurance',
+    title: 'Stock Insurance',
+    badge: 'Inventory & Goods-in-Storage Shield',
+    subtitle: 'Protect valuable stock, raw materials & finished goods • Complete plans, benefits & documents',
+    image: '/assets/icon-stock-hd.jpg',
+    applyLabel: 'Get Stock Insurance Quote',
+    guidance: 'Shield your working capital inventory. Our Puducherry advisors provide tailored stock valuation and risk cover.',
+    card1: {
+      icon: Sparkles,
+      iconColor: 'text-[#d97706]',
+      title: 'POPULAR POLICY OPTIONS',
+      titleColor: 'text-[#8b1820]',
+      borderColor: 'border-[#ffe2e6]',
+      bg: 'bg-[#fff9fa]',
+      border: 'border-[#ffe8eb]',
+      bulletType: 'dot',
+      dotColor: 'bg-[#8b1820]',
+      items: [
+        { title: 'Floater Stock Policy', desc: 'Single policy covering fluctuating inventory stored across multiple godowns.' },
+        { title: 'Declaration Policy', desc: 'Pay premiums based on monthly average stock value reports for seasonal trade.' },
+        { title: 'Fire & Special Perils Cover', desc: 'Protection against fire, storm, flood, cyclone, lightning & explosion damages.' },
+        { title: 'Burglary & Housebreaking Protection', desc: 'Security against forceful break-in, theft and hold-up losses.' }
+      ]
+    },
+    card2: {
+      icon: CheckCircle2,
+      iconColor: 'text-[#8b1820]',
+      title: 'KEY BENEFITS & COVERAGE',
+      titleColor: 'text-[#0f2d59]',
+      borderColor: 'border-[#e2e8f0]',
+      bg: 'bg-[#f8fafc]',
+      border: 'border-[#e2e8f0]',
+      bulletType: 'check',
+      checkColor: 'text-[#8b1820]',
+      items: [
+        'Comprehensive coverage for raw materials, semi-finished & finished stock',
+        'Protection against natural calamities (STFI), riots, strikes and malicious damages',
+        'Cover for goods in transit between godowns and retail distribution points',
+        'Fast-track surveyor deputation and transparent claim settlements'
+      ]
+    },
+    card3: {
+      icon: FileText,
+      iconColor: 'text-[#a16207]',
+      title: 'DOCUMENTS REQUIRED',
+      titleColor: 'text-[#a16207]',
+      borderColor: 'border-[#fef08a]/60',
+      bg: 'bg-[#fffcf3]',
+      border: 'border-[#fef08a]/80',
+      bulletType: 'check',
+      checkColor: 'text-[#a16207]',
+      items: [
+        'GST Registration Certificate & Business PAN Card',
+        'Latest stock inventory statement / stock register book',
+        'Previous 2 years audited balance sheets & financial statements',
+        'Rental agreement or ownership proof of godown / warehouse',
+        'Basic KYC of business owner / partner / director (Aadhaar & PAN)'
+      ]
+    }
+  },
+  'shop-insurance': {
+    id: 'shop-insurance',
+    title: 'Shop Insurance',
+    badge: 'All-in-One Retail Business Package',
+    subtitle: 'Protect retail store structure, interior, stock & public liability • Complete plans, benefits & documents',
+    image: '/assets/icon-shop-hd.jpg',
+    applyLabel: 'Get Shop Insurance Quote',
+    guidance: 'Keep your retail business safe and sound. Our Puducherry advisors provide on-site evaluation and custom policies.',
+    card1: {
+      icon: Sparkles,
+      iconColor: 'text-[#d97706]',
+      title: 'POPULAR POLICY OPTIONS',
+      titleColor: 'text-[#8b1820]',
+      borderColor: 'border-[#ffe2e6]',
+      bg: 'bg-[#fff9fa]',
+      border: 'border-[#ffe8eb]',
+      bulletType: 'dot',
+      dotColor: 'bg-[#8b1820]',
+      items: [
+        { title: 'Retail Shopkeeper Package', desc: 'Unified package covering building, furniture, signage, glass & contents.' },
+        { title: 'Money-in-Transit & Safe Cover', desc: 'Protection against cash theft from cashier counter, safe or during bank deposit.' },
+        { title: 'Public Liability Insurance', desc: 'Shield against legal claims for accidental injury to customers inside premises.' },
+        { title: 'Electronic Equipment & Appliance Cover', desc: 'Protection for POS billing systems, CCTV, computers, ACs and freezers.' }
+      ]
+    },
+    card2: {
+      icon: CheckCircle2,
+      iconColor: 'text-[#8b1820]',
+      title: 'KEY BENEFITS & COVERAGE',
+      titleColor: 'text-[#0f2d59]',
+      borderColor: 'border-[#e2e8f0]',
+      bg: 'bg-[#f8fafc]',
+      border: 'border-[#e2e8f0]',
+      bulletType: 'check',
+      checkColor: 'text-[#8b1820]',
+      items: [
+        'All-risk coverage against fire, lightning, flooding, cyclone and burglary',
+        'Accidental breakage cover for plate glass windows and neon signboards',
+        'Protection for employee dishonesty (Fidelity Guarantee) and business interruption',
+        'Cost-effective combined policy with hassle-free single premium payment'
+      ]
+    },
+    card3: {
+      icon: FileText,
+      iconColor: 'text-[#a16207]',
+      title: 'DOCUMENTS REQUIRED',
+      titleColor: 'text-[#a16207]',
+      borderColor: 'border-[#fef08a]/60',
+      bg: 'bg-[#fffcf3]',
+      border: 'border-[#fef08a]/80',
+      bulletType: 'check',
+      checkColor: 'text-[#a16207]',
+      items: [
+        'Shop & Establishment License / Trade License / Municipal Tax receipt',
+        'Business GST Certificate & Business PAN Card',
+        'Shop rental lease agreement or property ownership proof',
+        'Approximate asset list (fixtures, electronic equipment, stock estimate)',
+        'Basic KYC of proprietor / partners (Aadhaar & PAN)'
+      ]
+    }
+  },
+  'property-insurance': {
+    id: 'property-insurance',
+    title: 'Property Insurance',
+    badge: 'Residential & Commercial Asset Shield',
+    subtitle: 'Comprehensive physical protection for buildings, homes & contents • Complete plans, benefits & documents',
+    image: '/assets/icon-property-hd.jpg',
+    applyLabel: 'Get Property Insurance Quote',
+    guidance: 'Preserve your valuable real estate assets. Our Puducherry advisors are ready to customize structural and contents coverage.',
+    card1: {
+      icon: Sparkles,
+      iconColor: 'text-[#d97706]',
+      title: 'POPULAR POLICY OPTIONS',
+      titleColor: 'text-[#8b1820]',
+      borderColor: 'border-[#ffe2e6]',
+      bg: 'bg-[#fff9fa]',
+      border: 'border-[#ffe8eb]',
+      bulletType: 'dot',
+      dotColor: 'bg-[#8b1820]',
+      items: [
+        { title: 'Home Structure & Contents Policy', desc: 'Complete protection for residential building together with valuable household goods.' },
+        { title: 'Commercial Building Cover', desc: 'Asset security for office complexes, shopping centers, hotels and schools.' },
+        { title: 'Industrial All-Risk (IAR) Policy', desc: 'Large-scale manufacturing plant, machinery breakdown and factory protection.' },
+        { title: 'Tenant Protection Plan', desc: 'Dedicated coverage for internal furniture, electronics and rented home contents.' }
+      ]
+    },
+    card2: {
+      icon: CheckCircle2,
+      iconColor: 'text-[#8b1820]',
+      title: 'KEY BENEFITS & COVERAGE',
+      titleColor: 'text-[#0f2d59]',
+      borderColor: 'border-[#e2e8f0]',
+      bg: 'bg-[#f8fafc]',
+      border: 'border-[#e2e8f0]',
+      bulletType: 'check',
+      checkColor: 'text-[#8b1820]',
+      items: [
+        'Natural catastrophe protection against earthquakes, cyclones, floods and lightning',
+        'Structural damage cover for explosion, aircraft damage, burst water pipes and fire',
+        'Reinstatement value basis ensuring full reconstruction cost reimbursement',
+        'Alternative accommodation expense reimbursement during building repair period'
+      ]
+    },
+    card3: {
+      icon: FileText,
+      iconColor: 'text-[#a16207]',
+      title: 'DOCUMENTS REQUIRED',
+      titleColor: 'text-[#a16207]',
+      borderColor: 'border-[#fef08a]/60',
+      bg: 'bg-[#fffcf3]',
+      border: 'border-[#fef08a]/80',
+      bulletType: 'check',
+      checkColor: 'text-[#a16207]',
+      items: [
+        'Property title deed / Mother document / Patta copy or Approved building plan',
+        'Recent property tax / House tax receipt or Electricity (EB) bill',
+        'Valuation report or carpet / built-up area measurement details',
+        'List of valuable contents, equipment or machinery (if contents covered)',
+        'Basic KYC of property owner (Aadhaar Card, PAN Card & Photos)'
+      ]
+    }
   }
 };
+
+function getCardConfig(modalData) {
+  if (!modalData) return null;
+  if (modalData.card1) {
+    return {
+      card1: modalData.card1,
+      card2: modalData.card2,
+      card3: modalData.card3,
+    };
+  }
+  return {
+    card1: {
+      icon: Sparkles,
+      iconColor: 'text-[#d97706]',
+      title: 'KEY BENEFITS & FEATURES',
+      titleColor: 'text-[#8b1820]',
+      borderColor: 'border-[#ffe2e6]',
+      bg: 'bg-[#fff9fa]',
+      border: 'border-[#ffe8eb]',
+      bulletType: 'check',
+      checkColor: 'text-[#8b1820]',
+      items: modalData.benefits || []
+    },
+    card2: {
+      icon: User,
+      iconColor: 'text-[#0f2d59]',
+      title: 'ELIGIBILITY CRITERIA',
+      titleColor: 'text-[#0f2d59]',
+      borderColor: 'border-[#e2e8f0]',
+      bg: 'bg-[#f8fafc]',
+      border: 'border-[#e2e8f0]',
+      bulletType: 'dot',
+      dotColor: 'bg-[#0f2d59]',
+      items: modalData.eligibility || []
+    },
+    card3: {
+      icon: FileText,
+      iconColor: 'text-[#a16207]',
+      title: 'DOCUMENTS REQUIRED',
+      titleColor: 'text-[#a16207]',
+      borderColor: 'border-[#fef08a]/60',
+      bg: 'bg-[#fffcf3]',
+      border: 'border-[#fef08a]/80',
+      bulletType: 'check',
+      checkColor: 'text-[#a16207]',
+      items: modalData.documents || []
+    }
+  };
+}
 
 export default function SolutionsSection() {
   const [showAllLoans, setShowAllLoans] = useState(false);
   const [showAllInsurance, setShowAllInsurance] = useState(false);
-  const [activeLoanModalId, setActiveLoanModalId] = useState(null);
+  const [activeModalId, setActiveModalId] = useState(null);
 
   const displayedLoans = showAllLoans ? loanProducts : loanProducts.slice(0, 4);
   const displayedInsurance = showAllInsurance ? insuranceProducts : insuranceProducts.slice(0, 4);
 
-  const currentModalData = activeLoanModalId ? loanModalDetails[activeLoanModalId] : null;
+  const currentModalData = activeModalId ? serviceModalDetails[activeModalId] : null;
+  const cardsConfig = getCardConfig(currentModalData);
 
   // Close modal on Escape key and manage body overflow lock
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.key === 'Escape') {
-        setActiveLoanModalId(null);
+        setActiveModalId(null);
       }
     }
-    if (activeLoanModalId) {
+    if (activeModalId) {
       document.body.style.overflow = 'hidden';
       window.addEventListener('keydown', handleKeyDown);
     } else {
@@ -267,11 +740,11 @@ export default function SolutionsSection() {
       document.body.style.overflow = '';
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [activeLoanModalId]);
+  }, [activeModalId]);
 
   const handleCardClick = (item) => {
-    if (loanModalDetails[item.id]) {
-      setActiveLoanModalId(item.id);
+    if (serviceModalDetails[item.id]) {
+      setActiveModalId(item.id);
     } else {
       // Smoothly navigate to free consultation and pre-select service
       window.dispatchEvent(new CustomEvent('select-service', { detail: item.id }));
@@ -283,7 +756,7 @@ export default function SolutionsSection() {
   };
 
   const handleApplyClick = (serviceId) => {
-    setActiveLoanModalId(null);
+    setActiveModalId(null);
     window.dispatchEvent(new CustomEvent('select-service', { detail: serviceId }));
     const consultationEl = document.getElementById('free-consultation');
     if (consultationEl) {
@@ -351,7 +824,7 @@ export default function SolutionsSection() {
               {/* 4 Cards in a Row Grid (Expandable) */}
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2.5 sm:gap-3 md:gap-3.5">
                 {displayedLoans.map((item) => {
-                  const hasModal = Boolean(loanModalDetails[item.id]);
+                  const hasModal = Boolean(serviceModalDetails[item.id]);
                   return (
                     <div
                       key={item.id}
@@ -434,35 +907,46 @@ export default function SolutionsSection() {
 
               {/* 4 Cards in a Row Grid (Expandable) */}
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2.5 sm:gap-3 md:gap-3.5">
-                {displayedInsurance.map((item) => (
-                  <div
-                    key={item.id}
-                    onClick={() => handleCardClick(item)}
-                    className="group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px] animate-in fade-in-50 duration-200"
-                  >
-                    <div className="w-full flex items-center justify-center h-14 xs:h-16 sm:h-18 mb-1.5">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-2xs"
-                        loading="lazy"
-                      />
-                    </div>
+                {displayedInsurance.map((item) => {
+                  const hasModal = Boolean(serviceModalDetails[item.id]);
+                  return (
+                    <div
+                      key={item.id}
+                      onClick={() => handleCardClick(item)}
+                      className="group bg-white rounded-xl sm:rounded-2xl p-2.5 xs:p-3 sm:p-3 md:p-3.5 pt-3.5 pb-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#edebe7] hover:border-[#f3cca0] hover:shadow-md transition-all duration-200 flex flex-col items-center justify-between text-center cursor-pointer min-h-[152px] xs:min-h-[160px] animate-in fade-in-50 duration-200 relative"
+                      title={hasModal ? `Click to view ${item.title} details & documents` : `Learn more about ${item.title}`}
+                    >
+                      {/* Badge indicator on cards with details modal */}
+                      {hasModal && (
+                        <div className="absolute top-2 right-2 text-[9px] font-bold text-[#b45309] bg-[#fefce8] px-1.5 py-0.5 rounded-full border border-[#fef08a] shadow-2xs opacity-90 group-hover:opacity-100 transition-opacity">
+                          Details
+                        </div>
+                      )}
 
-                    <div className="flex flex-col items-center my-auto px-0.5 w-full">
-                      <h4 className="text-[11.5px] xs:text-xs sm:text-[13px] font-bold text-[#004737] group-hover:text-[#c98218] transition-colors leading-tight">
-                        {item.title}
-                      </h4>
-                      <p className="text-[9.5px] xs:text-[10.5px] text-gray-500 leading-tight mt-1 max-w-[130px]">
-                        {item.subtitle}
-                      </p>
-                    </div>
+                      <div className="w-full flex items-center justify-center h-14 xs:h-16 sm:h-18 mb-1.5">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-2xs"
+                          loading="lazy"
+                        />
+                      </div>
 
-                    <div className="mt-2.5 w-5 h-5 rounded-full border border-[#f3cca0] bg-[#fffaf3] text-[#d97706] group-hover:bg-[#d97706] group-hover:text-white transition-all flex items-center justify-center flex-shrink-0">
-                      <ArrowRight className="w-2.5 h-2.5" />
+                      <div className="flex flex-col items-center my-auto px-0.5 w-full">
+                        <h4 className="text-[11.5px] xs:text-xs sm:text-[13px] font-bold text-[#004737] group-hover:text-[#c98218] transition-colors leading-tight">
+                          {item.title}
+                        </h4>
+                        <p className="text-[9.5px] xs:text-[10.5px] text-gray-500 leading-tight mt-1 max-w-[130px]">
+                          {item.subtitle}
+                        </p>
+                      </div>
+
+                      <div className="mt-2.5 w-5 h-5 rounded-full border border-[#f3cca0] bg-[#fffaf3] text-[#d97706] group-hover:bg-[#d97706] group-hover:border-[#d97706] group-hover:text-white transition-all flex items-center justify-center flex-shrink-0">
+                        <ArrowRight className="w-2.5 h-2.5" />
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -471,11 +955,11 @@ export default function SolutionsSection() {
 
       </div>
 
-      {/* ================= LOAN DETAILS MODAL WITH EXACT 3-CARD LAYOUT ================= */}
-      {currentModalData && (
+      {/* ================= DETAILS MODAL WITH EXACT 3-CARD LAYOUT ================= */}
+      {currentModalData && cardsConfig && (
         <div 
           className="fixed inset-0 z-[999] flex items-center justify-center p-3 xs:p-4 sm:p-6 bg-black/60 backdrop-blur-md animate-modal-backdrop"
-          onClick={() => setActiveLoanModalId(null)}
+          onClick={() => setActiveModalId(null)}
         >
           {/* Modal Container */}
           <div 
@@ -510,7 +994,7 @@ export default function SolutionsSection() {
               {/* Close Button */}
               <button
                 type="button"
-                onClick={() => setActiveLoanModalId(null)}
+                onClick={() => setActiveModalId(null)}
                 className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all cursor-pointer flex-shrink-0 active:scale-95 ml-2"
                 title="Close (Esc)"
               >
@@ -523,21 +1007,67 @@ export default function SolutionsSection() {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 md:gap-4.5 xl:gap-5 items-stretch">
                 
-                {/* ================= CARD 1: KEY BENEFITS & FEATURES (Pastel Rose / Maroon) ================= */}
-                <div className="bg-[#fff9fa] border border-[#ffe8eb] rounded-2xl md:rounded-[22px] p-4 sm:p-5 shadow-xs flex flex-col justify-start">
+                {/* ================= CARD 1 ================= */}
+                <div className={`${cardsConfig.card1.bg} border ${cardsConfig.card1.border} rounded-2xl md:rounded-[22px] p-4 sm:p-5 shadow-xs flex flex-col justify-start`}>
                   {/* Card Header */}
-                  <div className="flex items-center gap-2 pb-3 border-b border-[#ffe2e6]">
-                    <Sparkles className="w-4 h-4 text-[#d97706] flex-shrink-0" />
-                    <h4 className="text-xs sm:text-[13px] font-bold text-[#8b1820] tracking-wider uppercase">
-                      KEY BENEFITS & FEATURES
+                  <div className={`flex items-center gap-2 pb-3 border-b ${cardsConfig.card1.borderColor}`}>
+                    {React.createElement(cardsConfig.card1.icon, {
+                      className: `w-4 h-4 ${cardsConfig.card1.iconColor} flex-shrink-0`
+                    })}
+                    <h4 className={`text-xs sm:text-[13px] font-bold ${cardsConfig.card1.titleColor} tracking-wider uppercase`}>
+                      {cardsConfig.card1.title}
                     </h4>
                   </div>
 
                   {/* Items List */}
                   <div className="mt-3.5 space-y-3">
-                    {currentModalData.benefits.map((item, idx) => (
+                    {cardsConfig.card1.items.map((item, idx) => (
                       <div key={idx} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#8b1820] flex-shrink-0 mt-0.5" strokeWidth={2.2} />
+                        {cardsConfig.card1.bulletType === 'dot' ? (
+                          <span className={`w-1.5 h-1.5 rounded-full ${cardsConfig.card1.dotColor || 'bg-[#8b1820]'} flex-shrink-0 mt-1.5`} />
+                        ) : (
+                          <CheckCircle2 className={`w-4 h-4 ${cardsConfig.card1.checkColor || 'text-[#8b1820]'} flex-shrink-0 mt-0.5`} strokeWidth={2.2} />
+                        )}
+                        {typeof item === 'string' ? (
+                          <span className="text-xs sm:text-[12.5px] text-gray-800 leading-snug font-medium">
+                            {item}
+                          </span>
+                        ) : (
+                          <div className="flex flex-col">
+                            <span className="text-xs sm:text-[12.5px] font-bold text-gray-900 leading-tight">
+                              {item.title}
+                            </span>
+                            <span className="text-[11px] sm:text-xs text-gray-600 leading-tight mt-0.5">
+                              {item.desc}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* ================= CARD 2 ================= */}
+                <div className={`${cardsConfig.card2.bg} border ${cardsConfig.card2.border} rounded-2xl md:rounded-[22px] p-4 sm:p-5 shadow-xs flex flex-col justify-start`}>
+                  {/* Card Header */}
+                  <div className={`flex items-center gap-2 pb-3 border-b ${cardsConfig.card2.borderColor}`}>
+                    {React.createElement(cardsConfig.card2.icon, {
+                      className: `w-4 h-4 ${cardsConfig.card2.iconColor} flex-shrink-0`
+                    })}
+                    <h4 className={`text-xs sm:text-[13px] font-bold ${cardsConfig.card2.titleColor} tracking-wider uppercase`}>
+                      {cardsConfig.card2.title}
+                    </h4>
+                  </div>
+
+                  {/* Items List */}
+                  <div className="mt-3.5 space-y-3">
+                    {cardsConfig.card2.items.map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2.5">
+                        {cardsConfig.card2.bulletType === 'dot' ? (
+                          <span className={`w-1.5 h-1.5 rounded-full ${cardsConfig.card2.dotColor || 'bg-[#0f2d59]'} flex-shrink-0 mt-1.5`} />
+                        ) : (
+                          <CheckCircle2 className={`w-4 h-4 ${cardsConfig.card2.checkColor || 'text-[#8b1820]'} flex-shrink-0 mt-0.5`} strokeWidth={2.2} />
+                        )}
                         <span className="text-xs sm:text-[12.5px] text-gray-800 leading-snug font-medium">
                           {item}
                         </span>
@@ -546,45 +1076,24 @@ export default function SolutionsSection() {
                   </div>
                 </div>
 
-                {/* ================= CARD 2: ELIGIBILITY CRITERIA (Ice Slate / Navy) ================= */}
-                <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-2xl md:rounded-[22px] p-4 sm:p-5 shadow-xs flex flex-col justify-start">
+                {/* ================= CARD 3 ================= */}
+                <div className={`${cardsConfig.card3.bg} border ${cardsConfig.card3.border} rounded-2xl md:rounded-[22px] p-4 sm:p-5 shadow-xs flex flex-col justify-start`}>
                   {/* Card Header */}
-                  <div className="flex items-center gap-2 pb-3 border-b border-[#e2e8f0]">
-                    <User className="w-4 h-4 text-[#0f2d59] flex-shrink-0" />
-                    <h4 className="text-xs sm:text-[13px] font-bold text-[#0f2d59] tracking-wider uppercase">
-                      ELIGIBILITY CRITERIA
+                  <div className={`flex items-center gap-2 pb-3 border-b ${cardsConfig.card3.borderColor}`}>
+                    {React.createElement(cardsConfig.card3.icon, {
+                      className: `w-4 h-4 ${cardsConfig.card3.iconColor} flex-shrink-0`
+                    })}
+                    <h4 className={`text-xs sm:text-[13px] font-bold ${cardsConfig.card3.titleColor} tracking-wider uppercase`}>
+                      {cardsConfig.card3.title}
                     </h4>
                   </div>
 
                   {/* Items List */}
-                  <div className="mt-3.5 space-y-3">
-                    {currentModalData.eligibility.map((item, idx) => (
+                  <div className={`mt-3.5 ${cardsConfig.card3.items.some(d => (typeof d === 'string' ? d.length > 75 : false)) ? 'space-y-2.5' : 'space-y-3'}`}>
+                    {cardsConfig.card3.items.map((item, idx) => (
                       <div key={idx} className="flex items-start gap-2.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#0f2d59] flex-shrink-0 mt-1.5" />
-                        <span className="text-xs sm:text-[12.5px] text-gray-800 leading-snug font-medium">
-                          {item}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* ================= CARD 3: DOCUMENTS REQUIRED (Warm Cream / Amber) ================= */}
-                <div className="bg-[#fffcf3] border border-[#fef08a]/80 rounded-2xl md:rounded-[22px] p-4 sm:p-5 shadow-xs flex flex-col justify-start">
-                  {/* Card Header */}
-                  <div className="flex items-center gap-2 pb-3 border-b border-[#fef08a]/60">
-                    <FileText className="w-4 h-4 text-[#a16207] flex-shrink-0" />
-                    <h4 className="text-xs sm:text-[13px] font-bold text-[#a16207] tracking-wider uppercase">
-                      DOCUMENTS REQUIRED
-                    </h4>
-                  </div>
-
-                  {/* Items List */}
-                  <div className={`mt-3.5 ${currentModalData.documents.some(d => d.length > 75) ? 'space-y-2.5' : 'space-y-3'}`}>
-                    {currentModalData.documents.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#a16207] flex-shrink-0 mt-0.5" strokeWidth={2.2} />
-                        <span className={`${currentModalData.documents.some(d => d.length > 75) ? 'text-[11px] sm:text-[11.5px]' : 'text-xs sm:text-[12.5px]'} text-gray-800 leading-snug font-medium`}>
+                        <CheckCircle2 className={`w-4 h-4 ${cardsConfig.card3.checkColor || 'text-[#a16207]'} flex-shrink-0 mt-0.5`} strokeWidth={2.2} />
+                        <span className={`${cardsConfig.card3.items.some(d => (typeof d === 'string' ? d.length > 75 : false)) ? 'text-[11px] sm:text-[11.5px]' : 'text-xs sm:text-[12.5px]'} text-gray-800 leading-snug font-medium`}>
                           {item}
                         </span>
                       </div>
@@ -604,7 +1113,7 @@ export default function SolutionsSection() {
               <div className="flex items-center gap-2.5 w-full sm:w-auto">
                 <button
                   type="button"
-                  onClick={() => setActiveLoanModalId(null)}
+                  onClick={() => setActiveModalId(null)}
                   className="w-1/2 sm:w-auto px-4 py-2 text-xs font-bold text-gray-700 hover:text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 rounded-xl transition-all cursor-pointer"
                 >
                   Close
