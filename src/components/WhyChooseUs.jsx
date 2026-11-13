@@ -55,7 +55,7 @@ const features = [
     id: 'support',
     title: 'End-to-End Support',
     descLine1: 'We are with you at every step, from',
-    descLine2: 'consultation to application and beyond.',
+    descLine2: 'consultation to disbursement and beyond.',
     icon: (
       // Headset / Support Icon
       <svg className="w-5 h-5 text-[#c48318]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
