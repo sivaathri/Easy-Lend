@@ -22,7 +22,7 @@ const serviceGroups = [
     badgeColor: 'bg-[#e6f4ed] text-[#004737]',
     items: [
       { id: 'home-loan', name: 'Home Loan', image: '/assets/icon-home-hd.jpg', desc: 'Fulfill dream of a home' },
-      { id: 'personal-loan', name: 'Personal Loan', image: '/assets/icon-personal-hd.jpg', desc: 'Instant personal funds' },
+      { id: 'personal-loan', name: 'Personal Loan', image: '/assets/icon-personal-laptop-hd.jpg', desc: 'Instant personal funds' },
       { id: 'business-loan', name: 'Business Loan', image: '/assets/icon-business-hd.jpg', desc: 'Scale business ambitions' },
       { id: 'mortgage-loan', name: 'Mortgage Loan', image: '/assets/icon-mortgage-hd.jpg', desc: 'Secured property finance' },
       { id: 'working-capital', name: 'Working Capital', image: '/assets/icon-capital-hd.jpg', desc: 'OD / CC  facilities' }
