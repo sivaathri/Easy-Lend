@@ -1,271 +1,133 @@
 import React from 'react';
-import { 
-  Home, 
-  Car, 
-  GraduationCap, 
-  ShieldCheck, 
-  Coins, 
-  ChevronRight, 
-  Phone, 
-  Mail, 
-  MapPin 
-} from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full relative mt-12 sm:mt-16 overflow-hidden">
+    <footer className="w-full bg-[#00382b] text-white border-t border-[#00241b] mt-10 sm:mt-14 overflow-hidden relative selection:bg-white/20">
       
-      {/* ================= 1. LUXURY WAVE & GOLDEN RIBBON HEADER ================= */}
-      <div className="w-full leading-none -mb-[1px]">
-        <svg 
-          className="w-full h-14 xs:h-16 sm:h-20 md:h-24 lg:h-28 block preserve-3d" 
-          viewBox="0 0 1440 120" 
-          fill="none" 
-          preserveAspectRatio="none"
+      {/* ================= EXACT HORIZONTAL FOOTER BAR (Exact Match to User Asset) ================= */}
+      <div className="w-full max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-3.5 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-3 xl:gap-4">
+        
+        {/* 1. BRAND LOGO (Left) */}
+        <a 
+          href="#" 
+          className="flex-shrink-0 select-none flex items-center group py-0.5"
+          title="Eazy Lend - Get loan, Buy insurance"
         >
-          <defs>
-            {/* Rich Metallic Gold Gradient */}
-            <linearGradient id="goldRibbonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#cf9128" />
-              <stop offset="18%" stopColor="#f7d478" />
-              <stop offset="38%" stopColor="#c3851b" />
-              <stop offset="55%" stopColor="#fae7a0" />
-              <stop offset="78%" stopColor="#d5982e" />
-              <stop offset="100%" stopColor="#aa6d0f" />
-            </linearGradient>
+          <img 
+            src="/assets/footer-logo-transparent.png" 
+            alt="Eazy Lend - Get loan, Buy insurance" 
+            className="h-8 xs:h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+          />
+        </a>
 
-            {/* Deep Green Wave Gradient */}
-            <linearGradient id="footerGreenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#003529" />
-              <stop offset="100%" stopColor="#00241b" />
-            </linearGradient>
+        {/* Divider 1 */}
+        <div className="hidden lg:block w-[1px] h-7 bg-white/25 flex-shrink-0" />
 
-            {/* Soft Shadow Filter for 3D Layered Depth */}
-            <filter id="ribbonShadow" x="-5%" y="-20%" width="110%" height="150%">
-              <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="#000000" floodOpacity="0.45" />
-            </filter>
-          </defs>
+        {/* 2. CALL US */}
+        <a 
+          href="tel:9659590505" 
+          className="flex items-center gap-2.5 sm:gap-3 group select-none hover:opacity-90 transition-opacity flex-shrink-0"
+          title="Call Eazy Lend"
+        >
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
+            <Phone className="w-3.5 h-3.5 text-white fill-white -rotate-12" />
+          </div>
+          <div className="flex flex-col text-left leading-tight">
+            <span className="text-[10.5px] sm:text-[11px] text-white/80 font-normal">
+              Call us
+            </span>
+            <span className="text-xs sm:text-[13px] font-bold text-white tracking-tight whitespace-nowrap">
+              9659590505 / 9585831478
+            </span>
+          </div>
+        </a>
 
-          {/* Top-Right Secondary Decorative Wave Accent */}
-          <path
-            d="M920,50 C1100,10 1280,20 1440,0 L1440,65 C1320,50 1140,45 920,50 Z"
-            fill="#014a3a"
-            opacity="0.5"
+        {/* Divider 2 */}
+        <div className="hidden lg:block w-[1px] h-7 bg-white/25 flex-shrink-0" />
+
+        {/* 3. EMAIL ID */}
+        <a 
+          href="mailto:eazylend.fs@gmail.com" 
+          className="flex items-center gap-2.5 sm:gap-3 group select-none hover:opacity-90 transition-opacity flex-shrink-0"
+          title="Email Eazy Lend"
+        >
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
+            <Mail className="w-3.5 h-3.5 text-white" />
+          </div>
+          <div className="flex flex-col text-left leading-tight">
+            <span className="text-[10.5px] sm:text-[11px] text-white/80 font-normal">
+              Email id
+            </span>
+            <span className="text-xs sm:text-[13px] font-bold text-white tracking-tight whitespace-nowrap">
+              eazylend.fs@gmail.com
+            </span>
+          </div>
+        </a>
+
+        {/* Divider 3 */}
+        <div className="hidden lg:block w-[1px] h-7 bg-white/25 flex-shrink-0" />
+
+        {/* 4. OUR OFFICE */}
+        <div className="flex items-start gap-2.5 sm:gap-3 select-none flex-shrink-0 max-w-sm">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white flex items-center justify-center flex-shrink-0 mt-0.5">
+            <MapPin className="w-3.5 h-3.5 text-white fill-white" />
+          </div>
+          <div className="flex flex-col text-left leading-tight">
+            <span className="text-[10.5px] sm:text-[11px] text-white/80 font-normal">
+              Our Office
+            </span>
+            <span className="text-[11px] sm:text-xs font-semibold text-white/95 leading-snug">
+              No. 59, 1st Floor, Iyyanar Kovil Street,<br />
+              Delarshpet, Puducherry – 605009
+            </span>
+          </div>
+        </div>
+
+        {/* Divider 4 */}
+        <div className="hidden lg:block w-[1px] h-7 bg-white/25 flex-shrink-0" />
+
+        {/* 5. MAP PREVIEW & "FIND US ON MAP" BUTTON (Right) */}
+        <div className="relative rounded-full overflow-hidden flex items-center gap-2.5 flex-shrink-0 pr-2 pl-3 py-1.5 border border-white/20 shadow-xs">
+          
+          {/* Real Street Map Graphic Background */}
+          <img 
+            src="/assets/footer-map-bg.svg" 
+            alt="Puducherry Map" 
+            className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
           />
 
-          {/* Main Footer Emerald Green Wave Background */}
-          <path 
-            d="M0,38 C140,82 320,10 560,18 C780,26 980,68 1180,42 C1290,28 1370,12 1440,0 L1440,120 L0,120 Z" 
-            fill="url(#footerGreenGrad)" 
-          />
+          {/* Amber Map Pin */}
+          <div className="relative z-10 flex-shrink-0 select-none">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 drop-shadow-sm" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#f59e0b" />
+              <circle cx="12" cy="9" r="2.2" fill="#ffffff" />
+            </svg>
+          </div>
 
-          {/* Golden Ribbon Glow Underlayer */}
-          <path 
-            d="M0,38 C140,82 320,10 560,18 C780,26 980,68 1180,42 C1290,28 1370,12 1440,0" 
-            stroke="url(#goldRibbonGrad)" 
-            strokeWidth="5" 
-            strokeLinecap="round"
-            filter="url(#ribbonShadow)"
-            fill="none" 
-          />
+          {/* Deep Dark Forest Green Pill Button */}
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=No.+59,+1st+Floor,+Iyyanar+Kovil+Street,+Delarshpet,+Puducherry+605009"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative z-10 inline-flex items-center gap-1.5 sm:gap-2 bg-[#002b21] hover:bg-[#001f18] text-white text-xs sm:text-[12.5px] font-semibold px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 shadow-xs transition-all duration-200 group active:scale-95 whitespace-nowrap select-none cursor-pointer"
+            title="Open location in Google Maps"
+          >
+            <span>Find us on Map</span>
+            <ArrowRight className="w-3.5 h-3.5 text-white group-hover:translate-x-0.5 transition-transform" />
+          </a>
+        </div>
 
-          {/* Crisp Metallic Gold Highlight Line */}
-          <path 
-            d="M0,38 C140,82 320,10 560,18 C780,26 980,68 1180,42 C1290,28 1370,12 1440,0" 
-            stroke="#fff1b5" 
-            strokeWidth="1.2" 
-            strokeOpacity="0.8"
-            fill="none" 
-          />
+        {/* Far-Right Vertical Accent Line */}
+        <div className="hidden xl:block w-[1px] h-7 bg-white/25 flex-shrink-0" />
 
-          {/* Subtle Secondary Golden Accent Trace */}
-          <path 
-            d="M0,43 C140,87 320,15 560,23 C780,31 980,73 1180,47 C1290,33 1370,17 1440,5" 
-            stroke="url(#goldRibbonGrad)" 
-            strokeWidth="1" 
-            strokeOpacity="0.45"
-            fill="none" 
-          />
-        </svg>
       </div>
 
-      {/* ================= 2. FOOTER MAIN BODY ================= */}
-      <div className="w-full bg-[#00241b] text-white">
-        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-10">
-          
-          {/* Main 4-Column Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-6 lg:gap-8 mb-10 sm:mb-12">
-            
-            {/* COLUMN 1: Logo, Mission & Social Icons (Span 4 cols) */}
-            <div className="lg:col-span-4 flex flex-col justify-between">
-              <div>
-                {/* Brand Logo matching exact uploaded asset */}
-                <a href="#" className="inline-block select-none mb-3 sm:mb-4 group">
-                  <img 
-                    src="/logo.png" 
-                    alt="EazyLend Loans & Insurance" 
-                    className="h-10 xs:h-11 sm:h-12 w-auto object-contain -ml-1 transition-transform duration-200 group-hover:scale-[1.02]"
-                    onError={(e) => {
-                      e.currentTarget.src = '/assets/footer-logo.png';
-                    }}
-                  />
-                </a>
-
-                {/* Subtitle / Paragraph */}
-                <p className="text-xs sm:text-[13px] text-emerald-100/80 leading-relaxed font-normal max-w-sm mb-6">
-                  Your trusted financial partner for loans, insurance, and long-term financial security.
-                </p>
-              </div>
-
-            
-            </div>
-
-            {/* COLUMN 2: Our Services (Span 3 cols) */}
-            <div className="lg:col-span-3">
-              <h3 className="text-white font-bold text-base sm:text-[17px] tracking-tight">
-                Our Services
-              </h3>
-              {/* Golden underline bar */}
-              <div className="w-9 h-[2.5px] bg-[#d49228] mt-2 mb-4 rounded-full" />
-              
-              <ul className="space-y-3">
-                <li>
-                  <a href="#loan-solutions" className="group flex items-center gap-2.5 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
-                    <Home className="w-4 h-4 text-[#e5a93b] flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span>Home Loan</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#loan-solutions" className="group flex items-center gap-2.5 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
-                    <Car className="w-4 h-4 text-[#e5a93b] flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span>Car Loan</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#loan-solutions" className="group flex items-center gap-2.5 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
-                    <GraduationCap className="w-4 h-4 text-[#e5a93b] flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span>Education Loan</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#loan-solutions" className="group flex items-center gap-2.5 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
-                    <ShieldCheck className="w-4 h-4 text-[#e5a93b] flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span>Insurance Plans</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#loan-solutions" className="group flex items-center gap-2.5 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
-                    <Coins className="w-4 h-4 text-[#e5a93b] flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span>Loan Advisory</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* COLUMN 3: Quick Links (Span 2 cols) */}
-            <div className="lg:col-span-2">
-              <h3 className="text-white font-bold text-base sm:text-[17px] tracking-tight">
-                Quick Links
-              </h3>
-              {/* Golden underline bar */}
-              <div className="w-9 h-[2.5px] bg-[#d49228] mt-2 mb-4 rounded-full" />
-
-              <ul className="space-y-3">
-                <li>
-                  <a href="#about-us" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#e5a93b] flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
-                    <span>About Us</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#loan-solutions" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#e5a93b] flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
-                    <span>Our Services</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#why-choose-us" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#e5a93b] flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
-                    <span>Why Choose Us</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#partners" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#e5a93b] flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
-                    <span>Our Partners</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#free-consultation" className="group flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-white transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#e5a93b] flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
-                    <span>Contact Us</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* COLUMN 4: Contact Us (Span 3 cols) */}
-            <div className="lg:col-span-3">
-              <h3 className="text-white font-bold text-base sm:text-[17px] tracking-tight">
-                Contact Us
-              </h3>
-              {/* Golden underline bar */}
-              <div className="w-9 h-[2.5px] bg-[#d49228] mt-2 mb-4 rounded-full" />
-
-              <div className="space-y-3.5">
-                {/* Phone */}
-                <div className="flex items-center gap-3">
-                  <div className="w-7 h-7 rounded-full bg-[#e5a93b]/15 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-3.5 h-3.5 text-[#e5a93b] fill-[#e5a93b]" />
-                  </div>
-                  <a 
-                    href="tel:9659590505" 
-                    className="text-xs sm:text-[13px] text-gray-200 hover:text-[#e5a93b] transition-colors"
-                  >
-                    +91 9659590505 / +91 9585831478
-                  </a>
-                </div>
-
-                {/* Email */}
-                <div className="flex items-center gap-3">
-                  <div className="w-7 h-7 rounded-full bg-[#e5a93b]/15 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-3.5 h-3.5 text-[#e5a93b]" />
-                  </div>
-                  <a 
-                    href="mailto:support@eazylend.in" 
-                    className="text-xs sm:text-[13px] text-gray-200 hover:text-[#e5a93b] transition-colors"
-                  >
-                    support@eazylend.in
-                  </a>
-                </div>
-
-                {/* Location Pin */}
-                <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-[#e5a93b]/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <MapPin className="w-3.5 h-3.5 text-[#e5a93b] fill-[#e5a93b]" />
-                  </div>
-                  <p className="text-xs sm:text-[13px] text-gray-200 leading-snug">
-                    Pondicherry, Puducherry – 605001, India
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* ================= 3. BOTTOM COPYRIGHT & LEGAL BAR ================= */}
-          <div className="border-t border-white/10 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-[11px] sm:text-xs text-emerald-100/70">
-            <div>
-              &copy; {new Date().getFullYear()} Eazy Lend. All Rights Reserved.
-            </div>
-
-         
-          </div>
-
-        </div>
+      {/* Discrete Copyright Bottom Bar */}
+      <div className="w-full border-t border-white/10 py-1.5 text-center text-[10.5px] sm:text-[11px] text-white/50 select-none">
+        &copy; {new Date().getFullYear()} Eazy Lend. All Rights Reserved.
       </div>
 
     </footer>
   );
 }
-
