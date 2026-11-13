@@ -65,13 +65,19 @@ const bankingPartners = [
   }
 ];
 
-// ================= 2. NBFC PARTNERS (7 Institutions) =================
+// ================= 2. NBFC PARTNERS (8 Institutions) =================
 const nbfcPartners = [
   {
     id: 'icici-home-finance',
     name: 'ICICI Home Finance',
     category: 'Housing Finance',
     logoSrc: '/assets/partners/icici-home-finance.png'
+  },
+  {
+    id: 'lic-hfl',
+    name: 'LIC Housing Finance Ltd',
+    category: 'Housing Finance',
+    logoSrc: '/assets/partners/lic-hfl.svg'
   },
   {
     id: 'aditya-birla-capital',
@@ -166,16 +172,11 @@ const insurancePartners = [
     name: 'Bajaj Allianz General Insurance',
     category: 'General Insurance',
     logoSrc: '/assets/partners/bajaj-allianz.png'
-  },
-  {
-    id: 'irdai-auth',
-    name: 'IRDAI Authorized Advisory',
-    category: 'Regulatory Authority',
-    logoSrc: '/assets/partners/irdai.svg'
   }
+  
 ];
 
-// ================= 4. DSA PARTNERS (7 Distribution Partners) =================
+// ================= 4. DSA PARTNERS (8 Distribution Partners) =================
 const dsaPartners = [
   {
     id: 'rajalakshmi',
@@ -218,6 +219,12 @@ const dsaPartners = [
     name: 'Starpowerz',
     category: 'DSA Partner',
     logoSrc: '/assets/partners/starpowerz.png'
+  },
+  {
+    id: 'digi-loans',
+    name: 'Digi Loans',
+    category: 'DSA Partner',
+    logoSrc: '/assets/partners/digi-loans.png'
   }
 ];
 
