@@ -29,7 +29,7 @@ const loanProducts = [
   {
     id: 'working-capital',
     title: 'Working Capital',
-    subtitle: 'OD / CC / UCL for Your Business',
+    subtitle: 'OD / CC  for Your Business',
     image: '/assets/icon-capital-hd.jpg',
     isFifth: true,
   },
@@ -73,8 +73,7 @@ export default function SolutionsSection() {
             {/* Header */}
             <div className="mb-3.5 sm:mb-4">
               <h2 className="text-xl xs:text-2xl sm:text-[24px] font-bold tracking-tight">
-                <span className="text-[#05372d]">Loan </span>
-                <span className="text-[#c98218]">Solutions</span>
+                <span className="text-[#05372d]">Loans</span>
               </h2>
               <p className="text-xs sm:text-[13px] md:text-sm text-gray-500 mt-0.5">
                 Flexible loan options to help you achieve your goals.
@@ -123,8 +122,7 @@ export default function SolutionsSection() {
             {/* Header */}
             <div className="mb-3.5 sm:mb-4">
               <h2 className="text-xl xs:text-2xl sm:text-[24px] font-bold tracking-tight">
-                <span className="text-[#05372d]">Insurance </span>
-                <span className="text-[#c98218]">Solutions</span>
+                <span className="text-[#05372d]">Insurance</span>
               </h2>
               <p className="text-xs sm:text-[13px] md:text-sm text-gray-500 mt-0.5">
                 Comprehensive insurance plans for a secure tomorrow.
