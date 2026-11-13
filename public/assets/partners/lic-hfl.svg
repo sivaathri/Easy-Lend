@@ -1,0 +1,43 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 90" width="340" height="90">
+  <!-- Left Side: LIC Official Emblem Container -->
+  <g transform="translate(10, 8)">
+    <!-- Blue Rounded Background for the Emblem -->
+    <rect x="0" y="0" width="74" height="74" rx="8" fill="#0054a6" />
+    
+    <!-- Warm Golden Inner Ring / Sun Burst -->
+    <circle cx="37" cy="37" r="28" fill="#f8b618" />
+    <circle cx="37" cy="37" r="23" fill="#0054a6" />
+    
+    <!-- Protective Hands Motif -->
+    <!-- Left Hand -->
+    <path d="M 23 46 C 21 40 23 33 26 28 C 27 26 29 27 29 29 C 27 34 26 39 28 43 C 29 45 27 47 25 47 Z" fill="#ffffff" />
+    <path d="M 27 49 C 25 44 26 37 30 32 C 31 31 33 32 32 34 C 29 38 29 43 31 47 C 32 49 30 50 28 50 Z" fill="#ffffff" />
+    <path d="M 32 52 C 30 48 31 42 34 37 C 35 36 37 37 36 39 C 34 43 34 47 35 50 C 36 52 34 53 33 53 Z" fill="#ffffff" />
+    
+    <!-- Right Hand -->
+    <path d="M 51 46 C 53 40 51 33 48 28 C 47 26 45 27 45 29 C 47 34 48 39 46 43 C 45 45 47 47 49 47 Z" fill="#ffffff" />
+    <path d="M 47 49 C 49 44 48 37 44 32 C 43 31 41 32 42 34 C 45 38 45 43 43 47 C 42 49 44 50 46 50 Z" fill="#ffffff" />
+    <path d="M 42 52 C 44 48 43 42 40 37 C 39 36 37 37 38 39 C 40 43 40 47 39 50 C 38 52 40 53 41 53 Z" fill="#ffffff" />
+    
+    <!-- Central Eternal Diya / Flame Motif (Light of Security) -->
+    <path d="M 37 20 C 34 24 33 28 35 32 C 36 34 38 34 39 32 C 41 28 40 24 37 20 Z" fill="#f8b618" />
+    <path d="M 37 23 C 35.5 25.5 35 28 36.5 30.5 C 37 31.5 37.5 31.5 38 30.5 C 39.5 28 39 25.5 37 23 Z" fill="#ffffff" />
+    
+    <!-- Lower Base Support -->
+    <path d="M 31 53 C 34 54.5 40 54.5 43 53 C 41 57 33 57 31 53 Z" fill="#f8b618" />
+  </g>
+
+  <!-- Right Side: Bold Typography -->
+  <!-- Line 1: Primary Brand Acronym "LIC HFL" -->
+  <text x="96" y="44" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="900" fill="#003366" letter-spacing="-0.5">
+    LIC <tspan fill="#d42628">HFL</tspan>
+  </text>
+  
+  <!-- Line 2: Full Entity Name "HOUSING FINANCE LTD" -->
+  <text x="97" y="64" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#4a5568" letter-spacing="1.2">
+    HOUSING FINANCE LTD
+  </text>
+  
+  <!-- Decorative Golden Accent Bar -->
+  <rect x="97" y="70" width="158" height="2" rx="1" fill="#f8b618" />
+</svg>
